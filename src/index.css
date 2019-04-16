@@ -12,3 +12,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  font-family: 'Titillium Web', sans-serif !important;
+}
+.card{
+  border:1px solid #eeeeee !important;
+}
+.card:hover{
+  box-shadow: 5px 3px 5px 0px rgba(237,237,237,1) !important;
+  border:1px solid white !important;
+}

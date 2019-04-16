@@ -1,25 +1,50 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route,Link } from 'react-router-dom';
+
 class LoginPage extends Component {
-  handleLogin() {
-   
-    this.props.history.push('/Dashboard');
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    };    
   }
+
+  handleLogin = () => {
+    
+    console.log("Username " + this.state.username);
+    if (this.state.username === "user") {
+     alert('Success');
+     this.props.history.push('/Home');
+    }
+    else {
+      debugger;
+      alert("wrong Username or Password");
+    }
+  }
+  handleChange = (e) =>{ 
+   
+    this.setState({[e.target.name]: e.target.value});
+   
+    console.log("username" + this.state.username);
+  }
+
+
   render() {
     return (
       <div className="App">
         <p>Hello World</p>
-        <div class="form-group">
-          <label class="sr-only">Username</label>
-          <input type="text" class="form-control" placeholder="Username" />
+        <div className="form-group">
+          <label className="sr-only">Username</label>
+          <input type="text" className="form-control" value={this.state.username} name="username" onChange={this.handleChange} />
         </div>
-        <div class="form-group">
-          <label for="password" class="sr-only">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password" />
+        <div className="form-group">
+        
+          <input type="password" className="form-control" value={this.state.password} name="password" placeholder="Password" onChange={this.handleChange}/>
         </div>
-        <Link to="/Dashboard">
-        <button onClick={this.handleLogin} type="submit" class="btn btn-primary">Login</button>
-        </Link>
+      
+          <button onClick={this.handleLogin} type="submit" className="btn btn-primary">Login</button>
+      
       </div>
     );
   }
