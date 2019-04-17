@@ -15,7 +15,7 @@ class LoginPage extends Component {
     console.log("Username " + this.state.username);
     if (this.state.username === "user") {
      alert('Success');
-     this.props.history.push('/Home');
+     this.props.history.push('/Home/Dashboard');
     }
     else {
       debugger;

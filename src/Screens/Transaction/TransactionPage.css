@@ -1,0 +1,15 @@
+
+table.HeaderTable tr.HeaderRow td {
+    text-align: left;
+    padding: 10px 0px;
+    font-size: 14px;
+    color: #acacac;
+  }
+  
+  tr.BodyRow td {
+    text-align: left;
+    padding: 8px 0px;
+    font-size: 14px;
+    color: #303030;
+  }
+  
