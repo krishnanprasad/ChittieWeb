@@ -1,6 +1,6 @@
 .main {
     /* Same as the width of the sidenav */
-    font-size: 28px;
+    font-size: 128px;
     /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
@@ -17,4 +17,11 @@ tr.BodyRow td {
     padding: 8px 0px;
     font-size: 14px;
     color: #303030;
+}
+
+.ShadowTable{
+    padding:10px;
+    background-color:white;
+    width:99%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 9px;
 }

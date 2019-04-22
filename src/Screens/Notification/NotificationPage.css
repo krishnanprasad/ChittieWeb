@@ -1,0 +1,22 @@
+.LefttdNotify{
+    width: 15%;
+    padding: 10px 0px;
+    color:#acacac;
+}
+
+.CentertdNotify{
+    width: 75%;
+    padding: 10px 0px;;
+}
+
+.RighttdNotify{
+    width: 10%;
+    padding: 10px 0px;;
+}
+
+.ShadowTable{
+    padding:10px;
+    background-color:white;
+    width:99%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 9px;
+}

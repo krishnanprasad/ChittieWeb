@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './GroupPage.css';
 class GroupPage extends Component {
   render() {
     return (
