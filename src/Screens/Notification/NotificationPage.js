@@ -4,8 +4,8 @@ import './NotificationPage.css';
 class NotificationPage extends Component {
     render() {
         return (
-            <div style={{ marginLeft: '22%', width: '78%' }}>
-                <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>Date</h5>
+            <div>
+                <h3 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '30px' }}>Date</h3>
                 <div className="col-md-12">
                     <div className="row">
                         <div className="ShadowTable">

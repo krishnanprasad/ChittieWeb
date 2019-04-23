@@ -3,9 +3,9 @@ import './ProfilePage.css';
 class ProfilePage extends Component {
     render() {
         return (
-            <div style={{ marginLeft: '22%', width: '78%' }}>
+            <div>
 
-                <div style={{textAlign:'center',marginTop: '50px',}}>
+                <div style={{ textAlign: 'center', marginTop: '20px', }}>
                     <img src={require("../../../src/assets/userimage.png")} style={{ width: '180px', height: '180px' }} alt="userimage" />
                     <div style={{ display: 'block', marginTop: '20px' }}>
                         <span style={{ fontSize: '30px' }}>Krishnan RA</span>
@@ -45,7 +45,16 @@ class ProfilePage extends Component {
                     </div>
 
                 </div>
-               
+
+                <h3>Approvers</h3>
+                <div className="col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                    <table class="table">
+
+                        </table>
+                    </div>
+                </div>
+
             </div>
         );
     }

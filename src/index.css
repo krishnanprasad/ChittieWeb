@@ -23,3 +23,18 @@ body {
   box-shadow: 5px 3px 5px 0px rgba(237,237,237,1) !important;
   border:1px solid white !important;
 }
+
+html, body, #root, #app>div {
+  height: 100%
+}
+
+body > #root > div {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+  .row{
+    width: 100% !important;
+  }
+}

@@ -3,9 +3,10 @@ import './GroupPage.css';
 class GroupPage extends Component {
   render() {
     return (
-      <div style={{marginLeft:'22%',width:'78%'}}>
-      <h3 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>Your Groups</h3>
+      <div>
+      
       <div className="col-md-12 main">
+      <h3 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>Your Groups</h3>
         <div className="row">
           <div className="col-md-4" >
             <div className="card" style={{ width: '95%', fontSize: '16px' }}>

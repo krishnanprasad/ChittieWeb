@@ -14,7 +14,7 @@ class SideNav extends Component {
   render() {
     return (
 
-      <div className="sidenav" style={{overflowY:'hidden'}}>
+      <div className="sidenav" style={{overflowY:'hidden',backgroundColor:'white',minHeight:'100%',textAlign:'center'}}>
         <div style={{ display: 'block', boxShadow: '0px 2px 5px #acacac', marginBottom: '10px' }}>
           <img src={require("../../../src/assets/download.png")} style={{ width: '120px', height: '70px' }} alt="userimage" />
         </div>

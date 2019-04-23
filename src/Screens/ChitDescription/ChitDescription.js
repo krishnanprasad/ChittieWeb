@@ -4,7 +4,7 @@ import './ChitDescription.css'
 class ChitDescription extends Component {
     render() {
         return (
-            <div style={{ marginLeft: '22%', width: '78%' }}>
+            <div className="ChitDescription">
 
                 <div class="d-flex mb-3">
                     <div class="p-2"><h2>Chit Name</h2> <span className="Raised">Raised</span>

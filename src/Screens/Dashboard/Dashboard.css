@@ -25,3 +25,12 @@ tr.BodyRow td {
     width:99%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 9px;
 }
+
+.showsidebar{
+    width: 100%;
+}
+.nosidebar{
+    width: 100%;
+   
+}
+

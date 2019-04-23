@@ -32,11 +32,15 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div class="row justify-content-center" style={{marginTop:'50px'}}>
-          <div className="col-md-8">
-            <p><h2>Welcome to Chittie</h2></p>
-            <p><span style={{ fontSize: '18px', color: '#acacac' }}>Invest and Get Loan from your Friends and Family</span></p>
+      <div className="LoginPage" style={{ textAlign: 'center' }}>
+        <div style={{marginTop: '10%'}}>
+          <p><h2 style={{color:'#4CAF50'}}>Welcome to Chittie</h2></p>
+          <p><span style={{ fontSize: '18px', color: '#5f5f5f' }}>Invest and Get Loan from your Friends and Family</span></p>
+        </div>
+        <div class="row justify-content-center" style={{ marginTop: '0px' }}>
+
+          <div className="col-md-6" style={{ backgroundColor: '#4CAF50', padding: '40px 20px',boxShadow:'rgb(142, 142, 142) 2px 2px 6px 1px' }}>
+
             <div className="form-group">
               <label className="sr-only">Username</label>
               <input type="text" className="form-control" value={this.state.username} name="username" placeholder="Enter Username" onChange={this.handleChange} />
@@ -46,7 +50,7 @@ class LoginPage extends Component {
               <input type="password" className="form-control" value={this.state.password} name="password" placeholder="Enter Password" onChange={this.handleChange} />
             </div>
 
-            <button onClick={this.handleLogin} type="submit" className="btn btn-primary">Login</button>
+            <button onClick={this.handleLogin} type="submit" className="btn" style={{backgroundColor:'white',color:'#4CAF50'}}>Login</button>
           </div>
         </div>
       </div>

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import SideNav from '../SideNav/Sidenav';
 import './HomePage.css';
-import Dashboard from '../Dashboard/Dashboard';
 import common from '../../Services/Common.js';
+import Dashboard from '../Dashboard/Dashboard';
+import GroupPage from '../Group/GroupPage';
 
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NotificationPage from '../Notification/NotificationPage';
+import ProfilePage from '../Profile/ProfilePage';
+import TransactionPage from '../Transaction/TransactionPage';
+import ChitDescription from '../ChitDescription/ChitDescription';
 class HomePage extends Component {
 
   constructor(props) {
@@ -13,32 +18,41 @@ class HomePage extends Component {
   }
 
   toggleSlidebar = () => {
-    common.toggle=!common.toggle;   
+    common.toggle = !common.toggle;
     this.setState({ showing: common.toggle });
   }
+
+  componentDidMount() {
+    let currentHideNav = (window.innerWidth <= 600);
+    console.log('Screen Size' + currentHideNav);
+    if (currentHideNav == true) {
+      common.toggle = true;
+    }
+
+  }
+
 
   render() {
 
     return (
+      <div className="HomePage" style={{backgroundColor:'#f9f9f9'}}>
+      
+        <button onClick={this.toggleSlidebar} className='ToggleButton' style={{ float: 'right' }}>Show Menu</button>
+        <div className="row" style={{ height: '100%' }}>
+          <div className="col-lg-2 col-sm-4">
+            {this.state.showing ? <SideNav /> : null}
 
-      <div className="App">
-
-        <div className="container">
-          <div className="col-md-12">
-            {/* <div className="row" style={{ marginLeft: '150px' }}> */}
-            <div className="row">
-              {/* <button onClick={this.toggleSlidebar}>toggle</button> */}
-              {this.state.showing ?
-                <SideNav />
-                : null
-              }
-              <div className="col-md-10 main" style={{ marginLeft: 'auto' }}>
-
-                {/* End of Main */}
-              </div>
-            </div>
+          </div>
+          <div className="col-lg-10 col-sm-12">
+            <Route path="/Home/Dashboard" exact component={Dashboard} />
+            <Route path="/Home/Group" component={GroupPage} />
+            <Route path="/Home/Notification" component={NotificationPage} />
+            <Route path="/Home/Profile" component={ProfilePage} />
+            <Route path="/Home/Transaction" component={TransactionPage} />
+            <Route path="/Home/ChitDescription/:descriptionid" component={ChitDescription} />
           </div>
         </div>
+
       </div>
     );
   }

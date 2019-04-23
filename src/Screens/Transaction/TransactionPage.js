@@ -5,10 +5,10 @@ import './TransactionPage.css';
 class TransactionPage extends Component {
     render() {
         return (
-            <div style={{ marginLeft: '22%', width: '78%' }}>
+            <div>
 
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Last Transaction</h3>
+                <h3 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '30px' }}>Last Transaction</h3>
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
