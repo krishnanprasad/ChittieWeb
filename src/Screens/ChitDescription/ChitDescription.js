@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 import './ChitDescription.css'
+import MemberListTable from './MemberListTable/Memberlist';
+import LastTransactionList from './LastTransactionList/LastTransactionList';
+import InfoList from './InfoList/InfoList';
+import {Link} from 'react-router-dom';
 
 class ChitDescription extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { isTabActive: 1 };
+
+    }
+    ChangeTab = (tabval) => {
+        this.setState({ isTabActive: tabval });
+    }
     render() {
         return (
             <div className="ChitDescription">
-
-                <div class="d-flex mb-3">
-                    <div class="p-2"><h2>Chit Name</h2> <span className="Raised">Raised</span>
-                    </div>
-
+                <div class="d-flex" style={{marginTop:'20px'}}>
+                    <div class="p-2 mr-auto" ><h2 style={{display:'inline-block'}}>Chit Name</h2><span style={{marginLeft:'10px'}} className="Raised">Raised</span></div>
+                    
+                    <div class="p-2"><button type="button" className="btn">Apply Loan</button> <Link to="/Home/MCT2014/Payment"><button type="button" className="btn btn-success">Pay EMI</button></Link></div>
                 </div>
-
+              
                 <div className="row" style={{ margin: '10px 0px 20px 0px' }}>
                     <div className="col-md-4">
                         <div style={{ display: 'block' }}>
@@ -69,192 +80,43 @@ class ChitDescription extends Component {
                             <h6 style={{ textAlign: 'left', color: '#acacac' }}>Current Chit Period</h6>
                         </div>
                         <div style={{ display: 'block' }}>
-                            <h3 style={{ textAlign: 'left' }}>8</h3>
+                            <h3 style={{ textAlign: 'left' }}>8/10</h3>
                         </div>
                     </div>
 
 
                 </div>
-                <div className="row" style={{ margin: '10px 0px 20px 0px' }}>
-                    <div className="col-md-3">
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left', color: '#acacac' }}>Start Date</h6>
-                        </div>
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left' }}>10-10-2019</h6>
-                        </div>
-                    </div>
 
-                    <div className="col-md-3">
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left', color: '#acacac' }}>Closing Date</h6>
-                        </div>
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left' }}>10-08-2020</h6>
-                        </div>
+                <div className="d-flex p-3" style={{ backgroundColor: 'white' }}>
+                    <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 1 ? 'tabactive' : 'tabnotactive'}`}>
+                        <span onClick={() => this.ChangeTab(1)} style={{ cursor: 'pointer' }}>Transactions</span>
                     </div>
-
-                    <div className="col-md-3">
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left', color: '#acacac' }}>Payment Deadline</h6>
-                        </div>
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left' }}>First 7 Days</h6>
-                        </div>
+                    <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 2 ? 'tabactive' : 'tabnotactive'}`}>
+                        <span onClick={() => this.ChangeTab(2)} style={{ cursor: 'pointer' }}>Members</span>
                     </div>
-                    <div className="col-md-3">
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left', color: '#acacac' }}>Bid Date</h6>
-                        </div>
-                        <div style={{ display: 'block' }}>
-                            <h6 style={{ textAlign: 'left' }}>First 7 Days</h6>
-                        </div>
+                    <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 3 ? 'tabactive' : 'tabnotactive'}`}>
+                        <span onClick={() => this.ChangeTab(3)} style={{ cursor: 'pointer' }}>Info</span>
                     </div>
+                </div>
+                <div>
+                    {
+                        this.state.isTabActive == 1 ? <LastTransactionList /> : null
+                    }
 
                 </div>
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Bid Status</h3>
-                <div className="ShadowTable">
-                    <table className="HeaderTable" style={{ width: '100%' }}>
-                        <tr className='HeaderRow'>
-                            <td>Applied Date</td>
-                            <td>Bid Date</td>
-                            <td>Bidder Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
+                <div>
+                    {
+                        this.state.isTabActive == 2 ? <MemberListTable /> : null
+                    }
 
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                        </tr>
-
-                    </table>
                 </div>
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Members</h3>
-                <div className="ShadowTable">
-                    <table className="HeaderTable" style={{ width: '100%' }}>
-                        <tr className='HeaderRow'>
-                            
-                            <td>Memeber Name</td>
-                            <td>Delay Payments</td>
-                            <td>Bid Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            
-                            <td>Transaction Date</td>
-                            <td>Delay Payments</td>
-                            <td>Group Name</td>
-
-                        </tr>
-                        <tr className='BodyRow'>
-                          
-                            <td>Memeber Name</td>
-                            <td>Delay Payments</td>
-                            <td>Bid Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                           
-                            <td>Memeber Name</td>
-                            <td>Delay Payments</td>
-                            <td>Bid Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                           
-                            <td>Memeber Name</td>
-                            <td>Delay Payments</td>
-                            <td>Bid Status</td>
-                        </tr>
-
-                    </table>
+                <div>
+                    {
+                        this.state.isTabActive == 3 ? <InfoList /> : null
+                    }
                 </div>
-
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Last Transaction</h3>
-                    <div className="ShadowTable">
-                        <table className="HeaderTable" style={{ width: '100%' }}>
-                            <tr className='HeaderRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>@username</td>
-                                
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>@username</td>
-                              
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>@username</td>
-                               
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>@username</td>                               
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>@username</td>
-                               
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
             </div>
         )
     }

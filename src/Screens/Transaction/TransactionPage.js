@@ -27,7 +27,7 @@ class TransactionPage extends Component {
                             <td>CAP</td>
                             <td>Term</td>
                             <td>Amount</td>
-                            <td><span style={{ backgroundColor: '#00cc00', color: 'white', padding: '5px 15px', borderRadius: '25px' }}>Paid</span></td>
+                            <td><span style={{ color: '#00cc00' }}>Success</span></td>
                         </tr>
                         <tr className='BodyRow'>
                             <td>Transaction ID</td>
@@ -36,7 +36,7 @@ class TransactionPage extends Component {
                             <td>CAP</td>
                             <td>Term</td>
                             <td>Amount</td>
-                            <td>Status</td>
+                            <td><span style={{ color: '#00cc00' }}>Success</span></td>
                         </tr>
                         <tr className='BodyRow'>
                             <td>Transaction ID</td>
@@ -45,7 +45,7 @@ class TransactionPage extends Component {
                             <td>CAP</td>
                             <td>Term</td>
                             <td>Amount</td>
-                            <td>Status</td>
+                            <td><span style={{ color: '#00cc00' }}>Success</span></td>
                         </tr>
                         <tr className='BodyRow'>
                             <td>Transaction ID</td>
@@ -54,7 +54,7 @@ class TransactionPage extends Component {
                             <td>CAP</td>
                             <td>Term</td>
                             <td>Amount</td>
-                            <td>Status</td>
+                            <td><span style={{ color: '#f44336' }}>Failed</span></td>
                         </tr>
 
                     </table>
@@ -97,7 +97,7 @@ class TransactionPage extends Component {
                             <td>CAP</td>
                             <td>Term</td>
                             <td>Amount</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: '#00cc00' }}>Pay</button></td>
+                            <td> <button type="button" className="btn" style={{ backgroundColor: '#bfbfbf' }}>Pay</button></td>
                         </tr>
                         <tr className='BodyRow'>
                             <td>Transaction ID</td>
@@ -110,7 +110,7 @@ class TransactionPage extends Component {
                           </td>
                             <td>
 
-                                <button type="button" className="btn" style={{ backgroundColor: '#00cc00' }}>Pay</button></td>
+                                <button type="button" className="btn" style={{ backgroundColor: '#bfbfbf' }}>Pay</button></td>
                         </tr>
 
                     </table>

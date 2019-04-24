@@ -45,14 +45,14 @@ class Dashboard extends Component {
                                 <h6 style={{ textAlign: 'left', color: '#acacac' }}>Earned</h6>
                             </div>
                             <div style={{ display: 'block' }}>
-                                <h3 style={{ textAlign: 'left' }}>3200</h3>
+                                <h3 style={{ textAlign: 'left',color:'#4fa746' }}>3200</h3>
                             </div>
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col-md-4 col-sm-12" >
-                            <Link to="/Home/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="/Home/Chit/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
                                 <div className="card" style={{ width: '95%', fontSize: '16px' }}>
                                     <div className="card-body">
                                         <h4 className="card-title">MCT 2017<span style={{ fontSize: '12px', backgroundColor: 'red', padding: '0px 5px', borderRadius: '10px', color: 'white', marginLeft: '10px' }}>Raised</span></h4>
@@ -85,7 +85,7 @@ class Dashboard extends Component {
                             </Link>
                         </div>
                         <div className="col-md-4 col-sm-12" >
-                            <Link to="/Home/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="/Home/Chit/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
                                 <div className="card" style={{ width: '98%', fontSize: '16px' }}>
                                     <div className="card-body">
                                         <h4 className="card-title">MCT 2015</h4>
@@ -119,7 +119,7 @@ class Dashboard extends Component {
                         </div>
 
                         <div className="col-md-4 col-sm-12" >
-                            <Link to="/Home/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
+                            <Link to="/Home/Chit/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
                                 <div className="card" style={{ width: '98%', fontSize: '16px' }}>
                                     <div className="card-body">
                                         <h4 className="card-title">MCT 2012</h4>
@@ -156,7 +156,7 @@ class Dashboard extends Component {
                         </div>
 
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Last Transaction</h3>
+                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Your Transactions</h3>
                 <div className="ShadowTable table-responsive">
                     <table className="table HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
