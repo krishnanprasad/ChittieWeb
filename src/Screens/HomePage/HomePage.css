@@ -5,6 +5,9 @@
 .BorderBlue {
   border: 1px solid blue;
 }
+.activelink{
+  color:red;
+}
 
 .sidenav {
   height: 100%;
@@ -38,14 +41,15 @@
 
 table.HeaderTable tr.HeaderRow td {
   text-align: left;
-  padding: 10px 0px;
+  padding: 8px 4px;
   font-size: 14px;
   color: #acacac;
+  border-bottom: 0.5px solid #ececec;
 }
 
 tr.BodyRow td {
   text-align: left;
-  padding: 8px 0px;
+  padding: 12px 0px;
   font-size: 14px;
   color: #303030;
 }

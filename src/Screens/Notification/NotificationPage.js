@@ -73,7 +73,7 @@ class NotificationPage extends Component {
                                             <div class="p-2">
                                                 <img src={require("../../../src/assets/icons/bid.png")} style={{ width: '30px', height: '30px' }} alt="userimage" />
                                             </div>
-                                            <div class="p-2">@Username has added bid for #6 in @goupname</div>
+                                            <div class="p-2">@Username has added Loan Request for #6 in @goupname</div>
                                             <div class="p-2 ml-auto" style={{fontSize:'14px',color:'#acacac'}}>10-06-2019 10:10am</div>
                                         </div>
                                     </td>

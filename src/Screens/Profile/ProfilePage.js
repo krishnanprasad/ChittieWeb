@@ -46,15 +46,64 @@ class ProfilePage extends Component {
 
                 </div>
 
-                <h3>Approvers</h3>
-                <div className="col-md-12 col-sm-12">
-                    <div class="table-responsive">
-                    <table class="table">
+                <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Connections</h5>
+                <div className="ShadowTable">
+                    <table className="HeaderTable" style={{ width: '100%' }}>
+                        <tr className='HeaderRow'>
 
-                        </table>
-                    </div>
+                            <td>Memeber Name</td>
+                            <td>Phone Number</td>
+                            <td>Transaction Rating</td>
+                        </tr>
+                        <tr className='BodyRow'>
+
+                            <td>
+                                <div>
+                                    <img className="userimage" src="http://placehold.it/150" alt="Image" />
+                                    <span className="username">Test 4</span>
+                                </div>
+                            </td>
+                            <td>+91-979079422</td>
+                            <td>89.71</td>
+
+                        </tr>
+                        <tr className='BodyRow'>
+
+                            <td>
+                                <div>
+                                    <img className="userimage" src="http://placehold.it/150" alt="Image" />
+                                    <span className="username">Test 4</span>
+                                </div>
+                            </td>
+                            <td>+91-8870009022</td>
+                            <td>89.71</td>
+                        </tr>
+                        <tr className='BodyRow'>
+
+                            <td>
+                                <div>
+                                    <img className="userimage" src="http://placehold.it/150" alt="Image" />
+                                    <span className="username">Test 4</span>
+                                </div>
+                            </td>
+                            <td>+91-8870009022</td>
+                            <td>89.71</td>
+                        </tr>
+                        <tr className='BodyRow'>
+
+                            <td>
+                                <div>
+                                    <img className="userimage" src="http://placehold.it/150" alt="Image" />
+                                    <span className="username">Test 4</span>
+                                </div>
+                            </td>
+                            <td>+91-8870009022</td>
+                            <td>89.71</td>
+                        </tr>
+
+                    </table>
                 </div>
-
+            
             </div>
         );
     }

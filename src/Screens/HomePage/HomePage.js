@@ -11,6 +11,9 @@ import ProfilePage from '../Profile/ProfilePage';
 import TransactionPage from '../Transaction/TransactionPage';
 import ChitDescription from '../ChitDescription/ChitDescription';
 import PaymentPage from '../PaymentPage/PaymentPage';
+import LoginPage from '../../Screens/LoginPage';
+import CreateChitPage from '../CreateChitPage/CreateChitPage';
+import GroupList from '../Group/GroupList/GroupList';
 class HomePage extends Component {
 
   constructor(props) {
@@ -36,22 +39,27 @@ class HomePage extends Component {
   render() {
 
     return (
-      <div className="HomePage" style={{backgroundColor:'#f9f9f9'}}>
-      
+      <div className="HomePage" style={{ backgroundColor: '#f9f9f9' }}>
+
         <button onClick={this.toggleSlidebar} className='ToggleButton' style={{ float: 'right' }}>Show Menu</button>
         <div className="row" style={{ height: '100%' }}>
           <div className="col-lg-3 col-sm-4">
             {this.state.showing ? <SideNav /> : null}
 
           </div>
-          <div className="col-lg-9 col-sm-12" style={{marginLeft:'-6%'}}>
+          <div className="col-lg-9 col-sm-12" style={{ marginLeft: '-6%' }}>
             <Route path="/Home/Dashboard" exact component={Dashboard} />
             <Route path="/Home/Group" component={GroupPage} />
-            <Route path="/Home/Notification" component={NotificationPage} />
-            <Route path="/Home/Profile" component={ProfilePage} />
-            <Route path="/Home/Transaction" component={TransactionPage} />
-            <Route path="/Home/Chit/:Chitid" component={ChitDescription} />
-            <Route path="/Home/:Chitid/Payment" component={PaymentPage} />
+
+            <Route path="/Home/Notification" exact component={NotificationPage} />
+            <Route path="/Home/Profile" exact component={ProfilePage} />
+            <Route path="/Home/Transaction" exact component={TransactionPage} />
+          
+            
+            
+
+            <Route path="/Home/CreateChit" component={CreateChitPage} />
+            <Route path="/" exact strict component={LoginPage} />
           </div>
         </div>
 

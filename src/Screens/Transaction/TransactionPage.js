@@ -116,7 +116,7 @@ class TransactionPage extends Component {
                     </table>
                 </div>
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Bid Status</h3>
+                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Loan Status</h3>
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
@@ -127,8 +127,8 @@ class TransactionPage extends Component {
                             <td>Term</td>
                             <td>Amount</td>
                             <td>Applied Date</td>
-                            <td>Bid Date</td>
-                            <td>Bidders</td>
+                            <td>Loan Date</td>
+                            <td>Username</td>
                             <td>Status</td>
                         </tr>
                         <tr className='BodyRow'>
@@ -142,7 +142,7 @@ class TransactionPage extends Component {
                             <td>16.16.2019</td>
                             <td>#6</td>
                             <td>Open</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: 'red', color: 'white' }}>Reverse Bid</button></td>
+                            <td><button type="button" className="btn" style={{ backgroundColor: 'red', color: 'white' }}>Cancel Loan Request</button></td>
                         </tr>
                         <tr className='BodyRow'>
                             <td>Transaction ID</td>

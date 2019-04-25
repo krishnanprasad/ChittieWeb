@@ -6,7 +6,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #b5b5b5;
     overflow-x: hidden;
     /* padding-top: 20px; */
     box-shadow: 5px 3px 5px 0px rgb(245, 245, 245);
@@ -20,10 +20,14 @@
   }
   
 
-  .active{
-    color:blue;
+  .activelink{
+    color:#da5700 !important;
+    font-weight: 500;
   }
 
+  .sidebarspan{
+    color:#1d1d1d;
+  }
   
 
   @media only screen and (max-width: 600px) {
