@@ -8,11 +8,11 @@ class GroupPage extends Component {
   render() {
     return (
       <div>
-
-        <Route path="" exact component={GroupList} />
-        <Route path="/ChitDescription/:id" exact component={ChitDescription} />
-        <Route path="/ChitDescription/:Chitid/Payment" exact component={PaymentPage} />
-
+      
+        <Route path="/Home/Group/" exact component={GroupList} />
+        <Route path="/Home/Group/ChitDescription/:id" exact component={ChitDescription} />
+        <Route path="/Home/Group/ChitDescription/:Chitid/Payment" exact component={PaymentPage} />
+      
       </div>
     );
   }
