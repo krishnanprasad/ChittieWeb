@@ -17,6 +17,9 @@ class ChitDescription extends Component {
     render() {
         return (
             <div className="ChitDescription">
+                <Link to="/Home/Group">
+                    <button type="button" className="btn btn-dark">back</button>
+                </Link>
                 <div class="d-flex" style={{ marginTop: '20px' }}>
                     <div class="p-2 mr-auto" ><h2 style={{ display: 'inline-block' }}>Chit Name</h2><span style={{ marginLeft: '10px' }} className="Raised">Raised</span></div>
 

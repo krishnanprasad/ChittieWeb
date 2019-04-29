@@ -1,109 +1,64 @@
 import React, { Component } from 'react';
+import OnGoing from '../OnGoing/OnGoing';
+import Accepted from '../Accepted/Accepted';
+import Completed from '../Completed/Completed';
+import Request from '../Request/Request';
 
 class GroupList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { isTabActive: 1 };
+
+    }
+    ChangeTab = (tabval) => {
+        this.setState({ isTabActive: tabval });
+    }
+
     render() {
         return (
             <div>
-             
                 <div className="col-md-12 main">
-                    <h3 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>Your Groups</h3>
-                    <div className="row">
-                        <div className="col-md-4" >
-                            <div className="card" style={{ width: '95%', fontSize: '16px' }}>
-                                <div className="card-body">
-                                    <h4 className="card-title">MCT 2014</h4>
-                                    <h6>1,50,000</h6>
-                                    <h2>1,922<span style={{ color: '#ff2f4b', fontSize: '18px' }}>(422)</span></h2>
-                                    <table style={{ width: '100%' }}>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>6/10</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>14.12.2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>15.12.2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Claimers</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>2/10</td>
-                                        </tr>
-                                    </table>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                        <button type="button" className="btn" style={{ backgroundColor: '#dedede', color: 'white' }}>Take Loan </button>
-                                        <button type="button" className="btn btn-success">Pay EMI</button>
-                                    </div>
-                                </div>
-                            </div>
+
+                    <div className="d-flex" style={{ backgroundColor: 'white', marginTop: '20px', fontSize: '18px',borderTop:'3px solid #ff9900' }}>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 1 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(1)} style={{ cursor: 'pointer' }}>On Going</span>
                         </div>
-                        <div className="col-md-4" >
-                            <div className="card" style={{ width: '95%', fontSize: '16px' }}>
-                                <div className="card-body">
-                                    <h4 className="card-title">MCT 2014</h4>
-                                    <h6>1,50,000</h6>
-                                    <h2>1,380<span style={{ color: '#0bc736', fontSize: '18px' }}>(120)</span></h2>
-                                    <table style={{ width: '100%' }}>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>6/10</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>14.12.2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>15.12.2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Claimers</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>2/10</td>
-                                        </tr>
-                                    </table>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                        <button type="button" className="btn" style={{ backgroundColor: 'white', color: '#8a8a8a', border: '1px solid #8a8a8a' }}>Apply Loan </button>
-                                        <button type="button" className="btn btn-success">Pay EMI</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 2 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(2)} style={{ cursor: 'pointer' }}>Accepted</span>
+                        </div>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 3 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(3)} style={{ cursor: 'pointer' }}>Completed</span>
+                        </div>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 4 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(4)} style={{ cursor: 'pointer' }}>Request</span>
                         </div>
 
-
-                        <div className="col-md-4" >
-                            <div className="card" style={{ width: '95%', fontSize: '16px' }}>
-                                <div className="card-body">
-                                    <h4 className="card-title">MCT 2014</h4>
-                                    <h6>1,50,000</h6>
-                                    <h2>1,500</h2>
-                                    <table style={{ width: '100%' }}>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>6/10</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>14.12.2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>15.12.2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Claimers</td>
-                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>2/10</td>
-                                        </tr>
-                                    </table>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                        <button type="button" className="btn" style={{ backgroundColor: 'white', color: '#8a8a8a', border: '1px solid #8a8a8a' }}>Apply Loan </button>
-                                        <button type="button" className="btn btn-success">Pay EMI</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 1 ? <OnGoing /> : null
+                        }
+
+                    </div>
+
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 2 ? <Accepted /> : null
+                        }
+
+                    </div>
+
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 3 ? <Completed /> : null
+                        }
+                    </div>
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 4 ? <Request /> : null
+                        }
+                    </div>
+
                 </div>
             </div>
         );

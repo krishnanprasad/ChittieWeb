@@ -1,178 +1,117 @@
 import React, { Component } from 'react';
-import './TransactionPage.css';
+import './Transaction/Transaction';
+import LoanPage from './Loan/LoanPage';
+import ClosurePage from './Closures/ClosurePage';
+import Transaction from './Transaction/Transaction';
+import DueComponent from './Due/DueComponent';
 
 
 class TransactionPage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { isTabActive: 1 };
+
+    }
+    ChangeTab = (tabval) => {
+        this.setState({ isTabActive: tabval });
+    }
     render() {
         return (
             <div>
 
 
-                <h3 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '30px' }}>Last Transaction</h3>
-                <div className="ShadowTable">
+                <h6 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '20px' }}>Total</h6>
+
+                <div className="ShadowTable" style={{ marginTop: '20px', marginBottom: '30px' }}>
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
+                            <td>EMI</td>
+                            <td>EMI Paid</td>
+                            <td>Loan Raised</td>
+                            <td>Earned</td>
+                            <td>Fine</td>
+
                         </tr>
                         <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><span style={{ color: '#00cc00' }}>Success</span></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><span style={{ color: '#00cc00' }}>Success</span></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><span style={{ color: '#00cc00' }}>Success</span></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><span style={{ color: '#f44336' }}>Failed</span></td>
+                            <td>132</td>
+                            <td>60,000</td>
+                            <td>6,60,600</td>
+                            <td><span style={{ color: '#00cc00' }}>8,400</span></td>
+                            <td><span style={{ color: 'red' }}>821</span></td>
                         </tr>
 
                     </table>
                 </div>
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Upcoming Payables</h3>
-                <div className="ShadowTable">
+                <h6 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '20px' }}>Current</h6>
+                <div className="ShadowTable" style={{ marginTop: '20px', marginBottom: '30px' }}>
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: '#00cc00' }}>Pay</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: '#00cc00' }}>Pay</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td> <button type="button" className="btn" style={{ backgroundColor: '#bfbfbf' }}>Pay</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>
-                                4420
-                          </td>
-                            <td>
+                            <td>EMI</td>
+                            <td>EMI Paid</td>
+                            <td>Loan Raised</td>
+                            <td>Earned</td>
+                            <td>Fine</td>
 
-                                <button type="button" className="btn" style={{ backgroundColor: '#bfbfbf' }}>Pay</button></td>
+                        </tr>
+                        <tr className='BodyRow'>
+                            <td>132</td>
+                            <td>16,500</td>
+                            <td>1,60,600</td>
+                            <td><span style={{ color: '#00cc00' }}>2,852</span></td>
+                            <td><span style={{ color: 'red' }}>21</span></td>
+
                         </tr>
 
                     </table>
                 </div>
 
-                <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Loan Status</h3>
-                <div className="ShadowTable">
-                    <table className="HeaderTable" style={{ width: '100%' }}>
-                        <tr className='HeaderRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Applied Date</td>
-                            <td>Loan Date</td>
-                            <td>Username</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                            <td>16.16.2019</td>
-                            <td>#6</td>
-                            <td>Open</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: 'red', color: 'white' }}>Cancel Loan Request</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
 
-                    </table>
+
+
+                <div className="col-md-12 main">
+
+                    <div className="d-flex" style={{ backgroundColor: 'white', marginTop: '20px', fontSize: '18px',borderTop:'3px solid #ff9900' }}>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 1 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(1)} style={{ cursor: 'pointer' }}>Transactions</span>
+                        </div>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 2 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(2)} style={{ cursor: 'pointer' }}>Laons</span>
+                        </div>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 3 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(3)} style={{ cursor: 'pointer' }}>Closures</span>
+                        </div>
+                        <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 4 ? 'tabactive' : 'tabnotactive'}`}>
+                            <span onClick={() => this.ChangeTab(4)} style={{ cursor: 'pointer' }}>Due</span>
+                        </div>
+
+                    </div>
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 1 ? <Transaction /> : null
+                        }
+
+                    </div>
+
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 2 ? <LoanPage /> : null
+                        }
+
+                    </div>
+
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 3 ? <ClosurePage /> : null
+                        }
+                    </div>
+
+                    <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
+                        {
+                            this.state.isTabActive === 4 ? <DueComponent /> : null
+                        }
+                    </div>
+
                 </div>
 
 

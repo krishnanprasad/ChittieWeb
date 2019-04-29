@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class DebitCardPage extends Component {
     render() {
@@ -26,11 +27,13 @@ class DebitCardPage extends Component {
                             <input className="form-control" id="ex1" type="text" />
                         </div>
                     </div>
-                   
 
-                    <div style={{ textAlign: 'right',marginTop:'20px' }}>
+
+                    <div style={{ textAlign: 'right', marginTop: '20px' }}>
                         <button type="button" className="btn btn-default">Cancel</button>
-                        <button type="button" className="btn btn-success">Pay</button>
+                        <Link to="/Home/Transaction">
+                            <button type="button" className="btn btn-success">Pay</button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -33,10 +33,10 @@ class Dashboard extends Component {
 
                         <div className="col-md-3 col-sm-12">
                             <div style={{ display: 'block' }}>
-                                <span style={{ textAlign: 'left', color: '#acacac',fontSize:'14px' }}>Loan Served</span>
+                                <span style={{ textAlign: 'left', color: '#acacac',fontSize:'14px' }}>Loan Raised</span>
                             </div>
                             <div style={{ display: 'block' }}>
-                                <h3 style={{ textAlign: 'left' }}>3/8</h3>
+                                <h3 style={{ textAlign: 'left' }}>1,45,000</h3>
                             </div>
                         </div>
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DebitCardPage from './DebitCardPage/DebitCardPage';
 import CreditCardPage from './CreditCardPage/CreditCardPage';
 import UPIPage from './UPIPage/UPIPage';
-
+import { Link } from 'react-router-dom';
 
 class PaymentPage extends Component {
     constructor(props) {
@@ -16,17 +16,35 @@ class PaymentPage extends Component {
     render() {
         return (
             <div>
-
-                <div style={{marginTop:'30px',marginBottom:'20px'}}>
+                <Link to="/Home/Group/ChitDescription/MCT2014">
+                    <button type="button" className="btn btn-dark">back</button>
+                </Link>
+                <div style={{ marginTop: '30px', marginBottom: '20px' }}>
                     <p><h5>MCT 2014 Batch -2</h5></p>
-                    <p><span style={{color:'#c5c5c5'}}>Total Amount to be Paid</span></p>
-                    <p><h5>1714</h5></p>
-                    <p><span style={{color:'#c5c5c5'}}>Split</span></p>
-                    <p><h5>1500 + 214</h5></p>
-                    <p><h5>Tenure:8/10</h5></p>
+
+                </div>
+                <div className="ShadowTable" style={{ marginTop: '20px', marginBottom: '30px' }}>
+                    <table className="HeaderTable" style={{ width: '100%' }}>
+                        <tr className='HeaderRow'>
+                            <td>Tenure</td>
+                            <td>Amount</td>
+                            <td>EMI</td>
+                            <td>Interest</td>
+                            <td>Fine</td>
+
+                        </tr>
+                        <tr className='BodyRow'>
+                            <td>#1</td>
+                            <td>16,500</td>
+                            <td>600</td>
+                            <td>600</td>
+                            <td><span style={{ color: '#00cc00' }}>2,852</span></td>
+                        </tr>
+
+                    </table>
                 </div>
 
-                <div className="d-flex p-3" style={{ backgroundColor: 'white' }}>
+                <div className="d-flex" style={{ backgroundColor: 'white',borderTop:'3px solid #ff9900' }}>
                     <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 1 ? 'tabactive' : 'tabnotactive'}`}>
                         <span onClick={() => this.ChangeTab(1)} style={{ cursor: 'pointer' }}>Credit Card</span>
                     </div>
