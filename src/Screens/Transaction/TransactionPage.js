@@ -18,31 +18,6 @@ class TransactionPage extends Component {
     render() {
         return (
             <div>
-
-
-                <h6 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '20px' }}>Total</h6>
-
-                <div className="ShadowTable" style={{ marginTop: '20px', marginBottom: '30px' }}>
-                    <table className="HeaderTable" style={{ width: '100%' }}>
-                        <tr className='HeaderRow'>
-                            <td>EMI</td>
-                            <td>EMI Paid</td>
-                            <td>Loan Raised</td>
-                            <td>Earned</td>
-                            <td>Fine</td>
-
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>132</td>
-                            <td>60,000</td>
-                            <td>6,60,600</td>
-                            <td><span style={{ color: '#00cc00' }}>8,400</span></td>
-                            <td><span style={{ color: 'red' }}>821</span></td>
-                        </tr>
-
-                    </table>
-                </div>
-
                 <h6 style={{ textAlign: 'left', marginTop: '20px', marginBottom: '20px' }}>Current</h6>
                 <div className="ShadowTable" style={{ marginTop: '20px', marginBottom: '30px' }}>
                     <table className="HeaderTable" style={{ width: '100%' }}>
