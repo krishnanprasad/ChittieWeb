@@ -48,7 +48,7 @@ class Dashboard extends Component {
                             </div>
                         </div>
                     </div>
-
+                    <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Your Chits</h3>
                     <div className="row">
                         <div className="col-md-4 col-sm-12" >
                             <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
