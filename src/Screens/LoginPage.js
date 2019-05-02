@@ -81,7 +81,7 @@ class LoginPage extends Component {
                   <div style={{ display: 'block', marginTop: '10px' }}>
                     <span style={{ fontSize: '20px' }}>Add Members</span>
                   </div>
-                </div>
+                </div>  
               </div>
               <div className="p-2 flex-fill" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
                 <div style={{ textAlign: 'center' }}>

@@ -82,7 +82,7 @@ class InfoList extends Component {
                         <tr className='BodyRow'>
                             <td>Transaction ID</td>
                             <td>Transaction Date</td>
-                            <td>Group Name</td>
+                            <td>Chit Name</td>
                             <td>CAP</td>
                             <td>Term</td>
                             <td>Amount</td>

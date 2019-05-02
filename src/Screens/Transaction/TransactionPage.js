@@ -4,7 +4,7 @@ import LoanPage from './Loan/LoanPage';
 import ClosurePage from './Closures/ClosurePage';
 import Transaction from './Transaction/Transaction';
 import DueComponent from './Due/DueComponent';
-
+import TransactionData from '../../Services/Transaction.json';
 
 class TransactionPage extends Component {
     constructor(props) {
@@ -63,27 +63,27 @@ class TransactionPage extends Component {
                     </div>
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 1 ? <Transaction /> : null
+                            this.state.isTabActive === 1 ? <Transaction TransactionList={TransactionData.TransactionList} /> : null
                         }
 
                     </div>
 
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 2 ? <LoanPage /> : null
+                            this.state.isTabActive === 2 ? <LoanPage LoanList={TransactionData.LoanList}/> : null
                         }
 
                     </div>
 
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 3 ? <ClosurePage /> : null
+                            this.state.isTabActive === 3 ? <ClosurePage ClosureList={TransactionData.ClosureList}/> : null
                         }
                     </div>
 
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 4 ? <DueComponent /> : null
+                            this.state.isTabActive === 4 ? <DueComponent DueList={TransactionData.DueList}/> : null
                         }
                     </div>
 

@@ -4,32 +4,31 @@ class ClosurePage extends Component {
     render() {
         return (
             <div>
-               
+
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
                             <td>Chit</td>
                             <td>Amount</td>
                             <td>TransactionID</td>
-                            <td>Date</td>
+                            <td>Earned</td>
+
                             <td>Status</td>
 
                         </tr>
-                        <tr className='BodyRow'>
-                            <td>Chit</td>
-                            <td>Amount</td>
-                            <td>TransactionID</td>
-                            <td>Date</td>
-                            <td><span style={{ color: '#00cc00' }}>Pay</span></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Chit</td>                          
-                            <td>Amount</td>
-                            <td>TransactionID</td>
-                            <td>Date</td>
-                            <td><span style={{ color: '#00cc00' }}>Pay</span></td>
-                        </tr>
-
+                        {
+                            this.props.ClosureList.map((closurelist, index) => {
+                                return (
+                                    <tr className='BodyRow'>
+                                        <td>{closurelist.chitname}</td>
+                                        <td>{closurelist.transactionid}</td>
+                                        <td>{closurelist.amount}</td>
+                                        <td>{closurelist.earned}</td>
+                                        <td>{closurelist.status}</td>
+                                    </tr>
+                                )
+                            })
+                        }
 
                     </table>
                 </div>

@@ -4,58 +4,29 @@ class DueComponent extends Component {
     render() {
         return (
             <div>
-              
+
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
+                            <td>Chit Name</td>                           
                             <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
+                            <td>EMI</td>
+                            <td>Last Date</td>
+                            <td>Pay</td>
                         </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: '#00cc00' }}>Pay</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td><button type="button" className="btn" style={{ backgroundColor: '#00cc00' }}>Pay</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td> <button type="button" className="btn" style={{ backgroundColor: '#bfbfbf' }}>Pay</button></td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Group Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>
-                                4420
-                          </td>
-                            <td>
-
-                                <button type="button" className="btn" style={{ backgroundColor: '#bfbfbf' }}>Pay</button></td>
-                        </tr>
+                        {
+                            this.props.DueList.map((duelist, index) => {
+                                return (
+                                    <tr className='BodyRow'>
+                                        <td>{duelist.chitname}</td>
+                                        <td>{duelist.term}</td>
+                                        <td>{duelist.emi}</td>
+                                        <td>{duelist.lastdate}</td>
+                                        <td><button type="button" className="btn btn-success">Pay</button></td>
+                                    </tr>
+                                )
+                            })
+                        }
 
                     </table>
                 </div>

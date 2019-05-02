@@ -3,6 +3,7 @@ import OnGoing from '../OnGoing/OnGoing';
 import Accepted from '../Accepted/Accepted';
 import Completed from '../Completed/Completed';
 import Request from '../Request/Request';
+import GroupListData from '../../../Services/GroupList.json';
 
 class GroupList extends Component {
     constructor(props) {
@@ -36,26 +37,26 @@ class GroupList extends Component {
                     </div>
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 1 ? <OnGoing /> : null
+                            this.state.isTabActive === 1 ? <OnGoing OnGoingList={GroupListData.OnGoingList} /> : null
                         }
 
                     </div>
 
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 2 ? <Accepted /> : null
+                            this.state.isTabActive === 2 ? <Accepted AcceptedList={GroupListData.AcceptedList}/> : null
                         }
 
                     </div>
 
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 3 ? <Completed /> : null
+                            this.state.isTabActive === 3 ? <Completed CompletedList={GroupListData.CompletedList}/> : null
                         }
                     </div>
                     <div style={{ textAlign: 'left', marginTop: '50px', marginBottom: '30px' }}>
                         {
-                            this.state.isTabActive === 4 ? <Request /> : null
+                            this.state.isTabActive === 4 ? <Request RequestList={GroupListData.RequestList}/> : null
                         }
                     </div>
 

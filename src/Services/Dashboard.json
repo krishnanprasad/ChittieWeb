@@ -1,0 +1,69 @@
+{
+    "Details":{
+        "totalchits":2,
+        "totalemi":3,
+        "loanraised":42000,
+        "earned":4200
+    },
+    "Chitlist": [
+        {
+            "chitid": "001",
+            "chitname": "MCT 2014",
+            "value": 15000,
+            "emi": 1350,
+            "term": "06/10",
+            "paydate": "09/11/2019",
+            "loandate": "10/11/2019"
+        },
+        {
+            "chitid": "002",
+            "chitname": "TVS NEXT",
+            "value": 16000,
+            "emi": 1750,
+            "term": "03/10",
+            "paydate": "11/11/2019",
+            "loandate": "15/11/2019"
+        }
+    ],
+    "TransactionList": [
+        {
+            "transactionid": "ACAC001123",
+            "transactiondate": "15/11/2019",
+            "chitid": "002",
+            "chitname": "TVS NEXT",
+            "term": "01/10",
+            "amount": 12600,
+            "status": true
+        },
+        {
+            "transactionid": "ACAC001124",
+            "transactiondate": "15/12/2019",
+            "chitid": "001",
+            "chitname": "MCT 2014",
+            "term": "03/10",
+            "amount": 12600,
+            "status": true
+        },
+        {
+            "transactionid": "ACAC001125",
+            "transactiondate": "06/01/2020",
+            "chitid": "002",
+            "chitname": "TVS NEXT",
+            "term": "04/10",
+            "amount": 12600,
+            "status": true
+        }
+    ],
+    "LoanList": [
+        {
+            "chitid": "002",
+            "chitname": "TVS NEXT",
+            "term": "04/10",
+            "cap": 10000,
+            "loanamount": 8600,
+            "totalapplicants": 3,
+            "loanlastdate": "06/01/2020",
+            "status": true
+        }
+    ]
+}

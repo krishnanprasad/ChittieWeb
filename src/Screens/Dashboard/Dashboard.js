@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
-import common from '../../Services/Common.js';
 import { Link } from 'react-router-dom';
+import DashboardData from '../../Services/Dashboard.json';
 class Dashboard extends Component {
     myFunction() {
         this.props.history.push("/some/Path");
@@ -14,289 +14,168 @@ class Dashboard extends Component {
                     <div className="row Shadow" style={{ margin: '10px 0px 20px 0px', backgroundColor: 'white' }}>
                         <div className="col-md-3">
                             <div style={{ display: 'block' }}>
-                                <span style={{ textAlign: 'left', color: '#acacac', fontSize: '14px' }}>Total Groups</span>
+                                <span className="SectionOneHeader">Total Groups</span>
                             </div>
                             <div style={{ display: 'block' }}>
-                                <h3 style={{ textAlign: 'left' }}>8</h3>
-                            </div>
-                        </div>
-
-                        <div className="col-md-3 col-sm-12">
-                            <div style={{ display: 'block' }}>
-                                <span style={{ textAlign: 'left', color: '#acacac', fontSize: '14px' }}>EMI/month</span>
-                            </div>
-                            <div style={{ display: 'block' }}>
-                                <h3 style={{ textAlign: 'left' }}>18,250</h3>
+                                <span className="SectionOneFooter">{DashboardData.Details.totalchits}</span>
                             </div>
                         </div>
 
                         <div className="col-md-3 col-sm-12">
                             <div style={{ display: 'block' }}>
-                                <span style={{ textAlign: 'left', color: '#acacac', fontSize: '14px' }}>Loan Raised</span>
+                                <span className="SectionOneHeader">EMI/month</span>
                             </div>
                             <div style={{ display: 'block' }}>
-                                <h3 style={{ textAlign: 'left' }}>1,45,000</h3>
+                                <span className="SectionOneFooter">{DashboardData.Details.totalemi}</span>
                             </div>
                         </div>
 
                         <div className="col-md-3 col-sm-12">
                             <div style={{ display: 'block' }}>
-                                <span style={{ textAlign: 'left', color: '#acacac', fontSize: '14px' }}>Earned</span>
+                                <span className="SectionOneHeader">Loan Raised</span>
                             </div>
                             <div style={{ display: 'block' }}>
-                                <h3 style={{ textAlign: 'left', color: '#4fa746' }}>3200</h3>
+                                <span className="SectionOneFooter">{DashboardData.Details.loanraised}</span>
+                            </div>
+                        </div>
+
+                        <div className="col-md-3 col-sm-12">
+                            <div style={{ display: 'block' }}>
+                                <span className="SectionOneHeader">Earned</span>
+                            </div>
+                            <div style={{ display: 'block' }}>
+                                <span className="SectionOneFooter">{DashboardData.Details.earned}</span>
                             </div>
                         </div>
                     </div>
-                    <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Your Chits</h3>
+                    <div className="SectionHeading">
+                        <span >Your Chits</span>
+                    </div>
+
                     <div className="row">
-                        <div className="col-md-4 col-sm-12" >
-                            <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
-                                <div className="card" style={{ width: '95%', fontSize: '16px' }}>
-                                    <div className="card-body">
-                                        <h4 className="card-title">MCT 2017<span style={{ fontSize: '12px', backgroundColor: 'red', padding: '0px 5px', borderRadius: '10px', color: 'white', marginLeft: '10px' }}>Raised</span></h4>
-                                       
-                                        <div style={{marginBottom:'10px'}}>
-                                            <div className="row">
-                                                <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                    <span style={{fontSize:'24px'}}>1,50,000</span>
-                                                </div>
-                                                <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                    <span style={{fontSize:'24px'}}>1,380</span>
+                        {
+                            DashboardData.Chitlist.map((chitlist, index) => {
+                                return (
+                                    <div className="col-md-4 col-sm-12" >
+                                        <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
+                                            <div className="card" style={{ width: '95%', fontSize: '16px' }}>
+                                                <div className="card-body">
+                                                    <h4 style={{color:'#383838'}}>{chitlist.chitname}<span style={{ fontSize: '12px', backgroundColor: '#FF9900', padding: '0px 5px', borderRadius: '10px', color: 'white', marginLeft: '10px' }}>Raised</span></h4>
+                                                    <div style={{ marginBottom: '10px' }}>
+                                                        <div className="row">
+                                                            <div className="col-md-6" style={{ textAlign: 'center' }}>
+                                                                <span style={{ fontSize: '24px',color:'#676767' }}>{chitlist.value}</span>
+                                                            </div>
+                                                            <div className="col-md-6" style={{ textAlign: 'center' }}>
+                                                                <span style={{ fontSize: '24px',color:'#676767' }}>{chitlist.emi}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="row">
+                                                            <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
+                                                                <span>Value</span>
+                                                            </div>
+                                                            <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
+                                                                <span>EMI</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <table className="table" style={{ width: '100%' }}>
+                                                        <tr>
+                                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
+                                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.term}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
+                                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.paydate}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
+                                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.loandate}</td>
+                                                        </tr>
+                                                    </table>
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
+                                                        <button type="button" className="btn" style={{ backgroundColor: '#dedede', color: 'white' }}>Apply Loan </button>
+                                                        <button type="button" className="btn btn-success">Pay EMI</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="row">
-                                                <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                    <span>Value</span>
-                                                </div>
-                                                <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                    <span>EMI</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <table className="table" style={{ width: '100%' }}>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>6/10</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>14.12.2019</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>15.12.2019</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Claimers</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>2/10</td>
-                                            </tr>
-                                        </table>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                            <button type="button" className="btn" style={{ backgroundColor: '#dedede', color: 'white' }}>Apply Loan </button>
-                                            <button type="button" className="btn btn-success">Pay EMI</button>
-                                        </div>
+                                        </Link>
                                     </div>
-                                </div>
-                            </Link>
-                        </div>
-                        <div className="col-md-4 col-sm-12" >
-                            <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
-                                <div className="card" style={{ width: '98%', fontSize: '16px' }}>
-                                    <div className="card-body">
-                                        <h4 className="card-title">MCT 2015</h4>
-                                        <div style={{marginBottom:'10px'}}>
-                                            <div className="row">
-                                                <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                    <span style={{fontSize:'24px'}}>1,50,000</span>
-                                                </div>
-                                                <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                    <span style={{fontSize:'24px'}}>1,380</span>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                    <span>Value</span>
-                                                </div>
-                                                <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                    <span>EMI</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <table className="table" style={{ width: '100%' }}>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>6/10</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>14.12.2019</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>15.12.2019</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Claimers</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>2/10</td>
-                                            </tr>
-                                        </table>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                            <button type="button" className="btn" style={{ backgroundColor: 'white', color: '#8a8a8a', border: '1px solid #8a8a8a' }}>Apply Loan </button>
-                                            <button type="button" className="btn btn-success">Pay EMI</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-
-                        <div className="col-md-4 col-sm-12" >
-                            <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
-                                <div className="card" style={{ width: '98%', fontSize: '16px' }}>
-                                    <div className="card-body">
-                                        <h4 className="card-title">MCT 2012</h4>
-                                       
-                                        <div style={{marginBottom:'10px'}}>
-                                            <div className="row">
-                                                <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                    <span style={{fontSize:'24px'}}>1,50,000</span>
-                                                </div>
-                                                <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                    <span style={{fontSize:'24px'}}>1,380</span>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                    <span>Value</span>
-                                                </div>
-                                                <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                    <span>EMI</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <table className="table" style={{ width: '100%' }}>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>6/10</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>14.12.2019</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>15.12.2019</td>
-                                            </tr>
-                                            <tr>
-                                                <td style={{ textAlign: 'left', padding: '10px 0px' }}>Claimers</td>
-                                                <td style={{ textAlign: 'right', padding: '10px 0px' }}>2/10</td>
-                                            </tr>
-                                        </table>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                            <button type="button" className="btn" style={{ backgroundColor: 'white', color: '#8a8a8a', border: '1px solid #8a8a8a' }}>Apply Loan</button>
-                                            <button type="button" className="btn btn-success">Pay EMI</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-
+                                )
+                            })
+                        }
 
                     </div>
 
 
-                    <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Your Transactions</h3>
+                    <div className="SectionHeading">
+                        <span >Last Transactions</span>
+                    </div>
                     <div className="ShadowTable table-responsive">
-                        <table className="table HeaderTable" style={{ width: '100%' }}>
+                        <table className="HeaderTable" style={{ width: '100%' }}>
                             <tr className='HeaderRow'>
+                                <td>Chit Name</td>
                                 <td>Transaction ID</td>
                                 <td>Transaction Date</td>
-                                <td>Group Name</td>
-                                <td>CAP</td>
                                 <td>Term</td>
                                 <td>Amount</td>
                                 <td>Status</td>
                             </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>Group Name</td>
-                                <td>CAP</td>
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>Group Name</td>
-                                <td>CAP</td>
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>Group Name</td>
-                                <td>CAP</td>
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            <tr className='BodyRow'>
-                                <td>Transaction ID</td>
-                                <td>Transaction Date</td>
-                                <td>Group Name</td>
-                                <td>CAP</td>
-                                <td>Term</td>
-                                <td>Amount</td>
-                                <td>Status</td>
-                            </tr>
+                            {
+                                DashboardData.TransactionList.map((transactionlist, index) => {
+                                    return (
+                                        <tr className='BodyRow'>
+                                            <td>{transactionlist.chitname}</td>
+                                            <td>{transactionlist.transactionid}</td>
+                                            <td>{transactionlist.transactiondate}</td>
+
+                                            <td>{transactionlist.term}</td>
+                                            <td>{transactionlist.amount}</td>
+                                            <td>{transactionlist.status}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+
 
                         </table>
                     </div>
 
-                    <h3 style={{ textAlign: 'left', marginTop: '100px', marginBottom: '30px' }}>Loan Status</h3>
+                    <div className="SectionHeading">
+                        <span>Loan Status</span>
+                    </div>
                     <div className="ShadowTable">
                         <table className="HeaderTable" style={{ width: '100%' }}>
                             <thead>
                                 <tr className='HeaderRow'>
-                                    <td>User</td>
-                                    <td>Group Name</td>
-                                    <td>CAP</td>
+                                 
+                                    <td>Chit Name</td>
                                     <td>Term</td>
-                                    <td>Total Loan Application</td>
-                                    <td>Amount</td>
-                                    <td>Loan Last date</td>
+                                    <td>CAP</td>                                    
+                                    <td>Your Bid</td>
+                                    <td>Last date</td>
+                                    <td>Loan Applicants</td>
                                     <td>Status</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className='BodyRow'>
-                                    <td>Krishnan RA</td>
-                                    <td>MCT 2014</td>
-                                    <td>20,00</td>
-                                    <td>02/10</td>
-                                    <td>#2</td>
-                                    <td>19,500</td>
-                                    <td>10.12.2019</td>
-                                    <td>open</td>
-                                </tr>
-                                <tr className='BodyRow'>
-                                    <td>Saravana Kumar</td>
-                                    <td>SKCET MCT</td>
-                                    <td>25,000</td>
-                                    <td>09/10</td>
-                                    <td>#1</td>
-                                    <td>24,500</td>
-                                    <td>11.12.2019</td>
-                                    <td>open</td>
-                                </tr>
+                                {
+                                    DashboardData.LoanList.map((loanlist, index) => {
+                                        return (
+                                            <tr className='BodyRow'>
+                                                <td>{loanlist.chitname}</td>
+                                                <td>{loanlist.term}</td>
+                                                <td>{loanlist.cap}</td>
+                                                <td>{loanlist.loanamount}</td>                                                
+                                                <td>{loanlist.loanlastdate}</td>    
+                                                <td>{loanlist.totalapplicants}</td>    
+                                                <td>{loanlist.status}</td>    
+                                            </tr>
+                                        )
+                                    }
+                                    )
+                                }                                
                             </tbody>
                         </table>
                     </div>

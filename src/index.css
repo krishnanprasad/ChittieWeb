@@ -38,3 +38,18 @@ body > #root > div {
     width: 100% !important;
   }
 }
+
+
+
+.FirstBlack{
+  color: #383838;
+}
+
+.SecondBlack{
+  color: #676767;
+}
+
+
+.ThirdBlack{
+  color: #909090;
+}
