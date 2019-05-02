@@ -43,10 +43,7 @@ class LoginPage extends Component {
             <div className="col-md-7" style={{ marginTop: 'auto', marginBottom: 'auto', paddingLeft: '50px' }}>
               <h1 style={{ color: 'white' }}>Save and Lend Money Simultaneously</h1>
               <p>
-                <h5 style={{ color: 'white' }}>Do Banking with your friends, Family and Collegues  Easily & Quickly</h5>
-              </p>
-              <p>
-                <h5 style={{ color: 'white' }}>Create Chit with your Collegues, Family and Friends</h5>
+                <h5 style={{ color: 'white' }}>Do Banking with your Friends, Family and Collegues  Easily & Quickly</h5>
               </p>
             </div>
             <div className="col-md-5" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
