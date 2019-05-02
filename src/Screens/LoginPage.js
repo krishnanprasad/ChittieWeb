@@ -34,8 +34,8 @@ class LoginPage extends Component {
     return (
       <div className="LoginPage">
         <div>
-          <div style={{ backgroundColor: '#ff9900', padding: '10px 5px' }}>
-            <h2 style={{ color: 'white' }}>Chittie</h2>
+          <div style={{ backgroundColor: '#ff9900', padding: '10px 10px' }}>
+            <h2 style={{ color: 'white' }}>Chittie <span style={{ fontSize: '15px' }}>[ create your own financial bank ]</span></h2>
           </div>
 
 
@@ -43,7 +43,7 @@ class LoginPage extends Component {
             <div className="col-md-7" style={{ marginTop: 'auto', marginBottom: 'auto', paddingLeft: '50px' }}>
               <h1 style={{ color: 'white' }}>Save and Lend Money Simultaneously</h1>
               <p>
-                <h5 style={{ color: 'white' }}>Do Transaction with your friends, Family and Collegues  Easily & Quickly</h5>
+                <h5 style={{ color: 'white' }}>Do Banking with your friends, Family and Collegues  Easily & Quickly</h5>
               </p>
               <p>
                 <h5 style={{ color: 'white' }}>Create Chit with your Collegues, Family and Friends</h5>
@@ -65,37 +65,41 @@ class LoginPage extends Component {
             </div>
           </div>
           <div>
-            <h2 style={{ textAlign: 'center', marginTop: '40px' }}>How it Works!</h2>
-            <div className="d-flex" style={{ height: '300px' }}>
-              <div className="p-2 flex-fill" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
+            <h3 className="SecondBlack" style={{ textAlign: 'center', marginTop: '40px' }}>How it Works!</h3>
+            <div className="row" style={{ height: '300px' }}>
+              <div className="col-md-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med1.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span style={{ fontSize: '20px' }}>Create Chit</span>
+                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Create Chit</span>
+                    <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Create a Chit based on Value,Tenure & Interest Rates</span>
                   </div>
                 </div>
               </div>
-              <div className="p-2 flex-fill" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
+              <div className="col-md-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med2.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span style={{ fontSize: '20px' }}>Add Members</span>
-                  </div>
-                </div>  
-              </div>
-              <div className="p-2 flex-fill" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
-                <div style={{ textAlign: 'center' }}>
-                  <img src={require("../../src/assets/LoginPage/med3.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
-                  <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span style={{ fontSize: '20px' }}>Start Chit</span>
+                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Add Members</span>
+                    <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Invite members from your connections for the Chit</span>
                   </div>
                 </div>
               </div>
-              <div className="p-2 flex-fill" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
+              <div className="col-md-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
+                <div style={{ textAlign: 'center' }}>
+                  <img src={require("../../src/assets/LoginPage/med3.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
+                  <div style={{ display: 'block', marginTop: '10px' }}>
+                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Start Chit</span>
+                    <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Once all members accepted chit it get started ,Chittie will start reminding your connections periodically</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med4.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span style={{ fontSize: '20px' }}>Save & Lend</span>
+                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Save & Lend</span>
+                    <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Start saving by paying CHIT regularly and Lend money when ever you want, At the end group members get divident on all Interest paid from lenders</span>
                   </div>
                 </div>
               </div>
@@ -104,8 +108,8 @@ class LoginPage extends Component {
           <div className="row" style={{ marginTop: '0px', backgroundColor: '#ff9900', backgroundImage: 'linear-gradient(180deg, #ff9900, #fdca2e)', height: '120px' }}>
             <div className="col-md-12" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
               <div className="row">
-                <div className="col-md-3" style={{textAlign:'center'}}>
-                  <span style={{color:'white'}}>Invite your Friends</span>
+                <div className="col-md-3" style={{ textAlign: 'center' }}>
+                  <span style={{ color: 'white' }}>Invite your Friends</span>
                 </div>
                 <div className="col-md-6" >
                   <input type="text" className="form-control" placeholder="Invite your Friends" />
