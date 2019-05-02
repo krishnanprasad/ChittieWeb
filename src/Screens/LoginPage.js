@@ -35,7 +35,7 @@ class LoginPage extends Component {
       <div className="LoginPage">
         <div>
           <div style={{ backgroundColor: '#ff9900', padding: '10px 10px' }}>
-            <h2 style={{ color: 'white' }}>Chittie <span style={{ fontSize: '15px' }}>[ create your own financial bank ]</span></h2>
+            <h2 style={{ color: 'white' }}>Chittie <span style={{ fontSize: '15px' }}>[ create your own bank ]</span></h2>
           </div>
 
 

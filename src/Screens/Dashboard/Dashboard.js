@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
 import DashboardData from '../../Services/Dashboard.json';
+import DashChitList from './ChitList/DashChitList';
 class Dashboard extends Component {
-    myFunction() {
-        this.props.history.push("/some/Path");
-    }
+    constructor(props) {
+        super(props);
 
+    }
+    DashChitList() {
+        if (DashboardData.ChitList.length > 0) {
+            return <DashChitList ChitList={DashboardData.ChitList} />
+        }
+        else {
+            return <Link to={'/Home/CreateChit'}>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Create Chit</button>
+            </Link>
+        }
+    }
     render() {
+
         return (
             <div className="Dashboard">
+
                 <div className="col-md-12 main" style={{ marginTop: '25px' }}>
                     <div className="row Shadow" style={{ margin: '10px 0px 20px 0px', backgroundColor: 'white' }}>
                         <div className="col-md-3">
@@ -48,66 +61,9 @@ class Dashboard extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="SectionHeading">
-                        <span >Your Chits</span>
-                    </div>
 
-                    <div className="row">
-                        {
-                            DashboardData.Chitlist.map((chitlist, index) => {
-                                return (
-                                    <div className="col-md-4 col-sm-12" >
-                                        <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
-                                            <div className="card" style={{ width: '95%', fontSize: '16px' }}>
-                                                <div className="card-body">
-                                                    <h4 style={{color:'#383838'}}>{chitlist.chitname}<span style={{ fontSize: '12px', backgroundColor: '#FF9900', padding: '0px 5px', borderRadius: '10px', color: 'white', marginLeft: '10px' }}>Raised</span></h4>
-                                                    <div style={{ marginBottom: '10px' }}>
-                                                        <div className="row">
-                                                            <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                                <span style={{ fontSize: '24px',color:'#676767' }}>{chitlist.value}</span>
-                                                            </div>
-                                                            <div className="col-md-6" style={{ textAlign: 'center' }}>
-                                                                <span style={{ fontSize: '24px',color:'#676767' }}>{chitlist.emi}</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                                <span>Value</span>
-                                                            </div>
-                                                            <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
-                                                                <span>EMI</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <table className="table" style={{ width: '100%' }}>
-                                                        <tr>
-                                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.term}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.paydate}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                                            <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.loandate}</td>
-                                                        </tr>
-                                                    </table>
-                                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                                        <button type="button" className="btn" style={{ backgroundColor: '#dedede', color: 'white' }}>Apply Loan </button>
-                                                        <button type="button" className="btn btn-success">Pay EMI</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                )
-                            })
-                        }
-
-                    </div>
-
+                    {this.DashChitList()}
+                    {/* <DashChitList ChitList={DashboardData.ChitList} /> */}
 
                     <div className="SectionHeading">
                         <span >Last Transactions</span>
@@ -149,10 +105,10 @@ class Dashboard extends Component {
                         <table className="HeaderTable" style={{ width: '100%' }}>
                             <thead>
                                 <tr className='HeaderRow'>
-                                 
+
                                     <td>Chit Name</td>
                                     <td>Term</td>
-                                    <td>CAP</td>                                    
+                                    <td>CAP</td>
                                     <td>Your Bid</td>
                                     <td>Last date</td>
                                     <td>Loan Applicants</td>
@@ -167,15 +123,15 @@ class Dashboard extends Component {
                                                 <td>{loanlist.chitname}</td>
                                                 <td>{loanlist.term}</td>
                                                 <td>{loanlist.cap}</td>
-                                                <td>{loanlist.loanamount}</td>                                                
-                                                <td>{loanlist.loanlastdate}</td>    
-                                                <td>{loanlist.totalapplicants}</td>    
-                                                <td>{loanlist.status}</td>    
+                                                <td>{loanlist.loanamount}</td>
+                                                <td>{loanlist.loanlastdate}</td>
+                                                <td>{loanlist.totalapplicants}</td>
+                                                <td>{loanlist.status}</td>
                                             </tr>
                                         )
                                     }
                                     )
-                                }                                
+                                }
                             </tbody>
                         </table>
                     </div>
