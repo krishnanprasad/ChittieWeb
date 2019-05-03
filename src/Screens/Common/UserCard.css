@@ -1,0 +1,15 @@
+.username{
+    font-size:14px;
+}
+
+.userphone{
+    font-size: 12px;
+}
+
+
+.userimage {
+    vertical-align: middle;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px
+}

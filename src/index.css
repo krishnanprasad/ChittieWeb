@@ -1,55 +1,58 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 body {
   font-family: 'Titillium Web', sans-serif !important;
 }
-.card{
-  border:1px solid #eeeeee !important;
+
+.card {
+  border: 1px solid #eeeeee !important;
 }
-.card:hover{
-  box-shadow: 5px 3px 5px 0px rgba(237,237,237,1) !important;
-  border:1px solid white !important;
+
+.card:hover {
+  box-shadow: 5px 3px 5px 0px rgba(237, 237, 237, 1) !important;
+  border: 1px solid white !important;
 }
 
 html, body, #root, #app>div {
   height: 100%
 }
 
-body > #root > div {
+body>#root>div {
   height: 100vh;
 }
 
 @media only screen and (max-width: 600px) {
- 
-  .row{
+  .row {
     width: 100% !important;
   }
 }
 
-
-
-.FirstBlack{
+.FirstBlack {
   color: #383838;
 }
 
-.SecondBlack{
+.SecondBlack {
   color: #676767;
 }
 
-
-.ThirdBlack{
+.ThirdBlack {
   color: #909090;
+}
+
+.FirstOrange {
+  color: #FF9900;
+}
+
+.SecondOrange {
+  color: #ff825a;
 }

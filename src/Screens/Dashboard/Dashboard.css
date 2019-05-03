@@ -65,18 +65,39 @@ tr.HeaderTable {
     border-top: none;
 }
 
-.btn-success {
-    background-color: white !important;
-    color: #e9ab00 !important;
-    border-color: #e9ab00 !important;
+.btn-emi {
+  
+    color: #1daf00 !important;
+    border-color: #1daf00 !important;
+   
 }
 
-.btn-success:hover {
-    background-color:  #e9ab00 !important;
+.btn-emi:hover {
+    background-color: #1daf00 !important;
     color: white !important;
-    border-color: #e9ab00 !important;
+    border-color: #1daf00 !important;
+}
+
+.btn-loan {
+    
+    color: #01aaaa !important;
+    border-color: #01aaaa !important;
+}
+
+.btn-loan:hover {
+    color:white !important;
+    background-color: #01aaaa !important;
 }
 
 .btn {
     padding: 0.175rem 0.50rem !important;
+}
+
+.btn-view {
+    color: #fc6432 !important;
+}
+
+.btn-view:hover {
+    color: white !important;
+    background-color: #fc6432;
 }

@@ -9,19 +9,49 @@
 
 .ChitDescription {}
 
-.userimage {
-    vertical-align: middle;
-    border-radius: 50%;
-    height: 32px;
-    width: 32px
+
+.p-2 {
+    padding: 0px !important;
 }
 
 .username {
-    display:inline-block;
+    display: inline-block;
     padding-left: 10px;
 }
 
-.tabactive{
+.tabactive {
     border-bottom: 2px solid #FF9800;
     color: #FF9800;
+}
+
+.tenurelist{
+    padding: 5px 15px;
+}
+
+.tenureactive {
+    color: white;
+    background-color: #ff825a;
+}
+
+.tenurenotactive {
+    color: #ff825a;
+    border: 1px solid #ff825a;
+}
+
+.CardHeader{
+    display: block;
+    padding: 10px 20px;
+    background-color: #E91E63;
+    color: white;
+    text-align: center;
+}
+
+.SectionCard{
+    background-color: #E91E63;
+    border:1px solid #E91E63;
+}
+
+.btn-bigger{
+    padding:15px 0px !important;
+    font-weight: bold;
 }

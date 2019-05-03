@@ -51,8 +51,11 @@ class DashChitList extends Component {
                                                     </tr>
                                                 </table>
                                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                                                    <button type="button" className="btn" style={{ backgroundColor: '#dedede', color: 'white' }}>Apply Loan </button>
-                                                    <button type="button" className="btn btn-success">Pay EMI</button>
+
+                                                    <button type="button" className="btn btn-emi">Pay EMI</button>
+                                                    <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
+                                                        <button type="button" className="btn btn-view">View</button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>

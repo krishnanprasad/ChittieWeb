@@ -1,111 +1,80 @@
 import React, { Component } from 'react';
-
+import './LastTransaction.css'
 class LastTransactionList extends Component {
     render() {
         return (
             <div>
 
-<h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Loan History</h5>
+                <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Transactions</h5>
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
-                            <td>Applied Date</td>
-                            <td>Loan Date</td>
+                            <td>Trasaction ID</td>
                             <td>User Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
+                            <td>Interest</td>
+                            <td>Fine</td>
+                            <td>Total</td>
+                            
                         </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Chit Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
 
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Chit Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Chit Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>Chit Name</td>
-                            <td>CAP</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>14.14.2019</td>
-                        </tr>
+                        {
+                            this.props.ChitDetails.LastTransactionList.map((transactiondetails, index) => {
+                                return (
+                                    <tr className={`BodyRow ${transactiondetails.paidstatus === true ? null : 'usernotpaid'}`}>
+
+                                        <td>{transactiondetails.transactionid}</td>
+                                        <td>
+                                            <img className="userimage" src="http://placehold.it/150" alt="Image" />
+                                            <span className="username">{transactiondetails.username}</span>
+                                        </td>
+
+                                        <td>{transactiondetails.interest}</td>
+                                        <td>{transactiondetails.fine}</td>
+                                        <td>{transactiondetails.amount}</td>
+                                        <td>{transactiondetails.paid}</td>
+                                        <td>{transactiondetails.status}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+
+
+
+
+
 
                     </table>
                 </div>
 
-                
-                  <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Last Transaction</h5>
+
+                <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Loan Bids</h5>
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>@username</td>
+
+                            <td>Username</td>
 
                             <td>Term</td>
                             <td>Amount</td>
                             <td>Status</td>
                         </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>@username</td>
+                        {
+                            this.props.ChitDetails.LoanList.map((loanlist, index) => {
+                                return (
 
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>@username</td>
+                                    <tr className={`BodyRow ${loanlist.bidstatus === true ? 'bidwon' : null}`}>
+                                        <td>
+                                            <img className="userimage" src="http://placehold.it/150" alt="Image" />
+                                            <span className="username">{loanlist.username}</span>
+                                        </td>
 
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>@username</td>
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
-                        <tr className='BodyRow'>
-                            <td>Transaction ID</td>
-                            <td>Transaction Date</td>
-                            <td>@username</td>
-
-                            <td>Term</td>
-                            <td>Amount</td>
-                            <td>Status</td>
-                        </tr>
+                                        <td>{loanlist.cap}</td>
+                                        <td>{loanlist.loanamount}</td>
+                                        <td>{loanlist.status}</td>
+                                    </tr>
+                                )
+                            })
+                        }
 
                     </table>
                 </div>
