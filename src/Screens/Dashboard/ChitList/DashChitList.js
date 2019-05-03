@@ -12,7 +12,7 @@ class DashChitList extends Component {
                     {
                         this.props.ChitList.map((chitlist, index) => {
                             return (
-                                <div className="col-md-4 col-sm-12" >
+                                <div className="col-md-6 col-sm-12" >
                                     <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
                                         <div className="card" style={{ width: '95%', fontSize: '16px' }}>
                                             <div className="card-body">
@@ -34,13 +34,26 @@ class DashChitList extends Component {
                                                             <span>EMI</span>
                                                         </div>
                                                     </div>
+                                                    <div className="row">
+                                                        <div className="col-md-6" style={{ textAlign: 'center' }}>
+                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.term}</span>
+                                                        </div>
+                                                        <div className="col-md-6" style={{ textAlign: 'center' }}>
+                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.earned}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
+                                                            <span>Tenure</span>
+                                                        </div>
+                                                        <div className="col-md-6" style={{ textAlign: 'center', fontSize: '12px', color: '#acacac' }}>
+                                                            <span>Earned</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                                 <table className="table" style={{ width: '100%' }}>
-                                                    <tr>
-                                                        <td style={{ textAlign: 'left', padding: '10px 0px' }}>Term</td>
-                                                        <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.term}</td>
-                                                    </tr>
+                                                   
                                                     <tr>
                                                         <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
                                                         <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.paydate}</td>
