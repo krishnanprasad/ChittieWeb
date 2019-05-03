@@ -3,9 +3,43 @@ import './LastTransaction.css'
 class LastTransactionList extends Component {
     render() {
         return (
+
             <div>
 
-                <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Transactions</h5>
+                <div className="ShadowTable" style={{ padding: '15px 10px' }}>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <span className="SecondBlack" style={{fontSize:'26px'}}>6</span>
+                        </div>
+                        <div className="col-md-3">
+                            <span className="SecondBlack" style={{fontSize:'26px'}}>6000</span>
+                        </div>
+                        <div className="col-md-3">
+                            <span className="SecondBlack" style={{fontSize:'26px'}}>1850</span>
+                        </div>
+                        <div className="col-md-3">
+                            <span className="SecondBlack" style={{fontSize:'26px'}}>3</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <span className="ThirdBlack">Tenure</span>
+                        </div>
+                        <div className="col-md-3">
+                            <span className="ThirdBlack">EMI</span>
+                        </div>
+                        <div className="col-md-3">
+                            <span className="ThirdBlack">Earned</span>
+                        </div>
+                        <div className="col-md-3">
+                            <span className="ThirdBlack">Remaining Payers</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="SectionHeading">
+                    <span >Transactions</span>
+                </div>
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>
@@ -14,7 +48,7 @@ class LastTransactionList extends Component {
                             <td>Interest</td>
                             <td>Fine</td>
                             <td>Total</td>
-                            
+
                         </tr>
 
                         {
@@ -47,7 +81,9 @@ class LastTransactionList extends Component {
                 </div>
 
 
-                <h5 style={{ textAlign: 'left', marginTop: '50px', marginBottom: '20px' }}>Loan Bids</h5>
+                <div className="SectionHeading">
+                    <span >Loan</span>
+                </div>
                 <div className="ShadowTable">
                     <table className="HeaderTable" style={{ width: '100%' }}>
                         <tr className='HeaderRow'>

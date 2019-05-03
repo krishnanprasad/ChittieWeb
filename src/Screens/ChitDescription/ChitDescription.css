@@ -1,5 +1,5 @@
 .Raised {
-    background-color: #ff825a;
+    background-color: #ff9900;
     color: white;
     padding: 2px 10px;
     font-size: 12px;
@@ -20,22 +20,26 @@
 }
 
 .tabactive {
-    border-bottom: 2px solid #FF9800;
-    color: #FF9800;
+    border-bottom: 2px solid #ff9900;
+    color: #ff9900;
 }
 
 .tenurelist{
-    padding: 5px 15px;
+  height:60px;
+  width: 60px;
+  border-radius: 50px;
+  text-align: center;
+
 }
 
 .tenureactive {
     color: white;
-    background-color: #ff825a;
+    background-color: #ff9900;
 }
 
 .tenurenotactive {
-    color: #ff825a;
-    border: 1px solid #ff825a;
+    color: #ff9900;
+    border: 1px solid #ff9900;
 }
 
 .CardHeader{

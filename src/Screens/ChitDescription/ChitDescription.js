@@ -131,27 +131,29 @@ class ChitDescription extends Component {
 
                         {/* Chit Tenure */}
 
-                        <div className="p-3" style={{ marginBottom: '10px' }}>
+                        <div className="p-3  flex-wrap" style={{ marginBottom: '10px' }}>
                             <div className="row" style={{ marginBottom: '10px' }}>
                                 <span className="SecondBlack" style={{ fontSize: '20px' }}>Tenures</span>
                             </div>
-                            <div className="d-flex">
-                                <div className="flex-fill" onClick={() => this.ChangeTenure(1)}>
-                                    <div style={{ marginRight: '20px' }} className={`tenurelist ${this.state.isTenureActive == 1 ? 'tenureactive' : 'tenurenotactive'}`}>
-                                        <span style={{ cursor: 'pointer' }}>#1</span>
+                            <div className="d-flex flex-wrap">
+                                <div className="" onClick={() => this.ChangeTenure(1)}>
+                                    <div style={{ marginRight: '20px', display: 'table' }} className={`tenurelist ${this.state.isTenureActive == 1 ? 'tenureactive' : 'tenurenotactive'}`}>
+                                        <span style={{ cursor: 'pointer', display: 'table-cell', verticalAlign: 'middle',fontSize:'22px' }}>#1</span>
                                     </div>
                                 </div>
-                                <div className="flex-fill" onClick={() => this.ChangeTenure(2)}>
-                                    <div style={{ marginRight: '20px' }} className={`tenurelist ${this.state.isTenureActive == 2 ? 'tenureactive' : 'tenurenotactive'}`}>
-                                        <span style={{ cursor: 'pointer' }}>#2</span>
+                                <div className="" onClick={() => this.ChangeTenure(2)}>
+                                    <div style={{ marginRight: '20px', display: 'table' }} className={`tenurelist ${this.state.isTenureActive == 2 ? 'tenureactive' : 'tenurenotactive'}`}>
+                                        <span style={{ cursor: 'pointer', display: 'table-cell', verticalAlign: 'middle',fontSize:'22px' }}>#2</span>
                                     </div>
                                 </div>
-                                <div className="flex-fill" onClick={() => this.ChangeTenure(3)}>
-                                    <div style={{ marginRight: '20px' }} className={`tenurelist ${this.state.isTenureActive == 3 ? 'tenureactive' : 'tenurenotactive'}`}>
-                                        <span style={{ cursor: 'pointer' }}>#3</span>
+                                <div className="" onClick={() => this.ChangeTenure(3)}>
+                                    <div style={{ marginRight: '20px', display: 'table' }} className={`tenurelist ${this.state.isTenureActive == 3 ? 'tenureactive' : 'tenurenotactive'}`}>
+                                        <span style={{ cursor: 'pointer', display: 'table-cell', verticalAlign: 'middle',fontSize:'22px' }}>#3</span>
                                     </div>
+                                    
                                 </div>
-
+                             
+                                
                             </div>
                         </div>
 
@@ -174,7 +176,7 @@ class ChitDescription extends Component {
 
                     </div>
                     <div className="col-md-2" style={{ position: 'fixed', overflowY: 'scroll', right: '10px', height: '500px' }}>
-                        <div className="Shadow card" style={{ marginBottom: '10px', backgroundColor: '#8bc34a' }}>
+                        <div className="Shadow card" style={{ marginBottom: '10px', backgroundColor: '#ff9900' }}>
                             <div style={{ display: 'block' }}>
                                 <h6 style={{ textAlign: 'center', color: 'white' }}>Current Chit Period</h6>
                             </div>

@@ -24,6 +24,8 @@
             "term": "03/10",
             "paydate": "11/11/2019",
             "earned": "-721",
+            "loanamount":40000,
+            "loantenure":"6",
             "loandate": "15/11/2019"
         }
     ],
