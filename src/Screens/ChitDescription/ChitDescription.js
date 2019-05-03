@@ -75,7 +75,7 @@ class ChitDescription extends Component {
 
                             <div className="col-md-4">
                                 <div className="d-flex" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)' }}>
-                                    <div style={{ backgroundColor: '#7eb53e' }}>
+                                    <div style={{ backgroundColor: '#585858' }}>
                                         <div style={{ marginTop: '20px', marginBottom: '10px', padding: '5px 10px' }}>
                                             <img src={require("../../../src/assets/icons/calendar.png")} style={{ width: '32px', height: '32px' }} alt="userimage" />
 
@@ -83,8 +83,8 @@ class ChitDescription extends Component {
                                     </div>
 
                                     <div className="flex-grow-1" style={{ backgroundColor: 'white', padding: '5px 10px' }}>
-                                        <h6 style={{ textAlign: 'left', color: '#7eb53e', fontWeight: 'bold' }}>Tenure</h6>
-                                        <h3 style={{ textAlign: 'left', color: '#7eb53e' }}>10</h3>
+                                        <h6 style={{ textAlign: 'left', color: '#585858', fontWeight: 'bold' }}>Tenure</h6>
+                                        <h3 style={{ textAlign: 'left', color: '#585858' }}>10</h3>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@ class ChitDescription extends Component {
 
                             <div className="col-md-4">
                                 <div className="d-flex" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)' }}>
-                                    <div style={{ backgroundColor: '#1e95ff' }}>
+                                    <div style={{ backgroundColor: '#585858' }}>
                                         <div style={{ marginTop: '20px', marginBottom: '10px', padding: '5px 10px' }}>
                                             <img src={require("../../../src/assets/icons/multiple-users.png")} style={{ width: '32px', height: '32px' }} alt="userimage" />
 
@@ -102,15 +102,15 @@ class ChitDescription extends Component {
                                     </div>
 
                                     <div className="flex-grow-1" style={{ backgroundColor: 'white', padding: '5px 10px' }}>
-                                        <h6 style={{ textAlign: 'left', color: '#1e95ff', fontWeight: 'bold' }}>Members</h6>
-                                        <h3 style={{ textAlign: 'left', color: '#1e95ff' }}>10</h3>
+                                        <h6 style={{ textAlign: 'left', color: '#585858', fontWeight: 'bold' }}>Members</h6>
+                                        <h3 style={{ textAlign: 'left', color: '#585858' }}>10</h3>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="col-md-4">
                                 <div className="d-flex" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)' }}>
-                                    <div style={{ backgroundColor: '#415d6b' }}>
+                                    <div style={{ backgroundColor: '#585858' }}>
                                         <div style={{ marginTop: '20px', marginBottom: '10px', padding: '5px 10px' }}>
                                             <img src={require("../../../src/assets/icons/percent.png")} style={{ width: '32px', height: '32px' }} alt="userimage" />
 
@@ -118,8 +118,8 @@ class ChitDescription extends Component {
                                     </div>
 
                                     <div className="flex-grow-1" style={{ backgroundColor: 'white', padding: '5px 10px' }}>
-                                        <h6 style={{ textAlign: 'left', color: '#415d6b', fontWeight: 'bold' }}>Percentage</h6>
-                                        <h3 style={{ textAlign: 'left', color: '#415d6b' }}>16.5%</h3>
+                                        <h6 style={{ textAlign: 'left', color: '#585858', fontWeight: 'bold' }}>Percentage</h6>
+                                        <h3 style={{ textAlign: 'left', color: '#585858' }}>16.5%</h3>
                                     </div>
                                 </div>
                             </div>
@@ -174,10 +174,6 @@ class ChitDescription extends Component {
 
                     </div>
                     <div className="col-md-2" style={{ position: 'fixed', overflowY: 'scroll', right: '10px', height: '500px' }}>
-                        <Link to="/Home/Group/ChitDescription/MCT2014/Payment" style={{ textDecoration: 'none', color: 'black' }}>
-                            <button type="button" className="btn btn-block btn-emi btn-bigger" style={{ marginBottom: '10px', marginTop: '10px' }}>Pay EMI 15,640</button>
-                        </Link>
-
                         <div className="Shadow card" style={{ marginBottom: '10px', backgroundColor: '#8bc34a' }}>
                             <div style={{ display: 'block' }}>
                                 <h6 style={{ textAlign: 'center', color: 'white' }}>Current Chit Period</h6>
@@ -188,8 +184,14 @@ class ChitDescription extends Component {
                             </div>
                         </div>
 
-                        <button type="button" className="btn btn-block btn-loan btn-bigger" style={{ marginBottom: '20px' }}>Apply Loan</button>
+                        <Link to="/Home/Group/ChitDescription/MCT2014/Payment" style={{ textDecoration: 'none', color: 'black' }}>
+                            <button type="button" className="btn btn-block btn-emi btn-bigger" style={{ marginBottom: '10px', marginTop: '10px' }}>Pay EMI 15,640</button>
+                        </Link>
 
+
+                        <Link to="/Home/Group/ChitDescription/MCT2014/ApplyLoan">
+                            <button type="button" className="btn btn-block btn-loan btn-bigger" style={{ marginBottom: '20px' }}>Apply Loan</button>
+                        </Link>
 
 
 
