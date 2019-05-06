@@ -1,7 +1,7 @@
 {
     "Details": {
         "totalchits": 2,
-        "totalemi": 3,
+        "savings": 36000,
         "loanraised": 42000,
         "earned": 4200
     },
@@ -14,6 +14,8 @@
             "term": "06/10",
             "paydate": "09/11/2019",
             "earned": "860",
+            "loanamount":0,
+            "loanavailable":"60000",
             "loandate": "10/11/2019"
         },
         {
@@ -25,7 +27,7 @@
             "paydate": "11/11/2019",
             "earned": "-721",
             "loanamount":40000,
-            "loantenure":"6",
+            "loanavailable":"15000",
             "loandate": "15/11/2019"
         }
     ],
@@ -67,7 +69,7 @@
             "loanamount": 8600,
             "totalapplicants": 3,
             "loanlastdate": "06/01/2020",
-            "status": true
+            "status": "Yet to Approve"
         }
     ]
 }

@@ -58,21 +58,21 @@ class DashChitList extends Component {
                                                 {
                                                     chitlist.loanamount != null ?
 
-                                                        <div style={{ marginTop: '10px',marginBottom:'10px' }}>
+                                                        <div style={{ marginTop: '10px', marginBottom: '10px' }}>
                                                             <div className="row">
                                                                 <div className="col-md-6" style={{ textAlign: 'left' }}>
                                                                     <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.loanamount}</span>
                                                                 </div>
                                                                 <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                                    <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.loantenure}</span>
+                                                                    <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.loanavailable}</span>
                                                                 </div>
                                                             </div>
                                                             <div className="row">
                                                                 <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
-                                                                    <span>Loan Amount</span>
+                                                                    <span>Loan Raised</span>
                                                                 </div>
                                                                 <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
-                                                                    <span>Loan Tenure</span>
+                                                                    <span>Loan Available</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -80,18 +80,9 @@ class DashChitList extends Component {
                                                         : null
                                                 }
 
-
-                                                <table className="table" style={{ width: '100%' }}>
-
-                                                    <tr>
-                                                        <td style={{ textAlign: 'left', padding: '10px 0px' }}>Pay Date</td>
-                                                        <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.paydate}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style={{ textAlign: 'left', padding: '10px 0px' }}>Loan Date</td>
-                                                        <td style={{ textAlign: 'right', padding: '10px 0px' }}>{chitlist.loandate}</td>
-                                                    </tr>
-                                                </table>
+                                                <div>
+                                                    <span className="ThirdBlack">Due Date: {chitlist.paydate}</span>
+                                                </div>
                                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
 
                                                     <button type="button" className="btn btn-emi">Pay EMI</button>

@@ -83,8 +83,8 @@ class ChitDescription extends Component {
                                     </div>
 
                                     <div className="flex-grow-1" style={{ backgroundColor: 'white', padding: '5px 10px' }}>
-                                        <h6 style={{ textAlign: 'left', color: '#585858', fontWeight: 'bold' }}>Tenure</h6>
-                                        <h3 style={{ textAlign: 'left', color: '#585858' }}>10</h3>
+                                        <h6 style={{ textAlign: 'left', color: '#585858', fontWeight: 'bold' }}>Loan Available</h6>
+                                        <h3 style={{ textAlign: 'left', color: '#585858' }}>10,000</h3>
                                     </div>
                                 </div>
                             </div>

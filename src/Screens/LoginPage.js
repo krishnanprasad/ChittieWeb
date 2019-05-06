@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class LoginPage extends Component {
 
   constructor(props) {
+    sessionStorage.setItem('userid', null);
     super(props);
     this.state = {
       username: '',
@@ -10,23 +11,38 @@ class LoginPage extends Component {
     };
   }
 
-  handleLogin = () => {
 
-    console.log("Username " + this.state.username);
-    if (this.state.username === "user") {
-      alert('Success');
-      this.props.history.push('/Home/Dashboard');
-    }
-    else {
-      debugger;
-      alert("wrong Username or Password");
-    }
+  handleLogin = () => {
+    sessionStorage.setItem('userid', '001');
+    this.props.history.push('/Home/Dashboard');
   }
+
+
+  // handleLogin = () => {
+  //   debugger;
+  //   console.log("Username " + this.state.username);
+  //   var url = `http://localhost:65204/api/usercredentials?password=${this.state.password}&phonenumber=${this.state.username}`;
+  //   debugger;
+  //   fetch(url)
+  //     .then(response => response.json())
+  //     .then((data) => {
+  //       debugger;
+
+  //       if (data != null) {
+  //         sessionStorage.setItem('userid', data.userid);
+  //         this.props.history.push('/Home/Dashboard');
+  //       }
+  //       else{
+  //         alert("wrong Username or Password");
+
+  //       }
+
+  //     });
+  // }
   handleChange = (e) => {
 
     this.setState({ [e.target.name]: e.target.value });
 
-    console.log("username" + this.state.username);
   }
 
 
@@ -50,7 +66,7 @@ class LoginPage extends Component {
               <div style={{ backgroundColor: '#FDCA2E', padding: '40px 20px', height: '280px', width: '95%' }}>
                 <div className="form-group">
                   <label className="sr-only">Username</label>
-                  <input type="text" className="form-control" value={this.state.username} name="username" placeholder="Enter Username" onChange={this.handleChange} />
+                  <input type="text" className="form-control" value={this.state.username} name="username" placeholder="Enter Phone Number" onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
 
@@ -68,7 +84,7 @@ class LoginPage extends Component {
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med1.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Create Chit</span>
+                    <span className="SecondBlack" style={{ fontWeight: 600, fontSize: '18px', display: 'block' }}>Create Chit</span>
                     <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Create a Chit based on Value,Tenure & Interest Rates</span>
                   </div>
                 </div>
@@ -77,7 +93,7 @@ class LoginPage extends Component {
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med2.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Add Members</span>
+                    <span className="SecondBlack" style={{ fontWeight: 600, fontSize: '18px', display: 'block' }}>Add Members</span>
                     <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Invite members from your connections for the Chit</span>
                   </div>
                 </div>
@@ -86,7 +102,7 @@ class LoginPage extends Component {
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med3.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Start Chit</span>
+                    <span className="SecondBlack" style={{ fontWeight: 600, fontSize: '18px', display: 'block' }}>Start Chit</span>
                     <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Once all members accepted chit it get started ,Chittie will start reminding your connections periodically</span>
                   </div>
                 </div>
@@ -95,7 +111,7 @@ class LoginPage extends Component {
                 <div style={{ textAlign: 'center' }}>
                   <img src={require("../../src/assets/LoginPage/med4.png")} style={{ width: '80px', height: '80px' }} alt="userimage" />
                   <div style={{ display: 'block', marginTop: '10px' }}>
-                    <span className="SecondBlack" style={{ fontWeight:600,fontSize: '18px', display: 'block' }}>Save & Lend</span>
+                    <span className="SecondBlack" style={{ fontWeight: 600, fontSize: '18px', display: 'block' }}>Save & Lend</span>
                     <span className="ThirdBlack" style={{ fontSize: '14px', display: 'block' }}>Start saving by paying CHIT regularly and Lend money when ever you want, At the end group members get divident on all Interest paid from lenders</span>
                   </div>
                 </div>
