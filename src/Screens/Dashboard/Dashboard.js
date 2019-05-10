@@ -22,7 +22,7 @@ class Dashboard extends Component {
 
             console.log('User ID is :' + sessionStorage.getItem('userid'));
             this.state.isUserLoggedIn = true;
-            console.log('user state:'+this.state.isUserLoggedIn )
+            console.log('user state:' + this.state.isUserLoggedIn)
         }
     }
 
@@ -47,42 +47,48 @@ class Dashboard extends Component {
             <div className="Dashboard">
                 {
 
-                    (this.state.isUserLoggedIn==false) ?
+                    (this.state.isUserLoggedIn == false) ?
                         <div className="col-md-12 main" style={{ marginTop: '25px' }}>
-                            <div className="row Shadow" style={{ margin: '10px 0px 20px 0px', backgroundColor: 'white' }}>
-                                <div className="col-md-3">
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneHeader">Total Groups</span>
-                                    </div>
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneFooter">{DashboardData.Details.totalchits}</span>
-                                    </div>
-                                </div>
+                            <div className="row" style={{ margin: '10px 0px 20px 0px' }}>
 
                                 <div className="col-md-3 col-sm-12">
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneHeader">Savings</span>
-                                    </div>
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneFooter">{DashboardData.Details.savings}</span>
-                                    </div>
-                                </div>
-
-                                <div className="col-md-3 col-sm-12">
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneHeader">Loan Raised</span>
-                                    </div>
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneFooter">{DashboardData.Details.loanraised}</span>
+                                    <div className="d-flex flex-column" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)',backgroundColor:'white',borderLeft:'5px solid #2196f3' }}>
+                                        <div className="" style={{ textAlign: "center", paddingTop: '5px' }}>
+                                            <span style={{ fontSize: '18px',color: '#2196f3',fontWeight:'600' }}>Total Chits</span>
+                                        </div>
+                                        <div style={{ textAlign: "center", paddingTop: '10px', paddingBottom: '10px' }}>
+                                            <span className="SecondBlack" style={{ fontSize: '28px' }}>{DashboardData.Details.totalchits}</span>
+                                        </div>
                                     </div>
                                 </div>
-
                                 <div className="col-md-3 col-sm-12">
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneHeader">Earned</span>
+                                    <div className="d-flex flex-column" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)',backgroundColor:'white',borderLeft:'5px solid #ff00aa'  }}>
+                                        <div className="" style={{ textAlign: "center", paddingTop: '5px',  }}>
+                                            <span className="ThirdWhite" style={{ fontSize: '18px',color: '#ff00aa',fontWeight:'600' }}>Savings</span>
+                                        </div>
+                                        <div style={{ textAlign: "center", paddingTop: '10px', paddingBottom: '10px' }}>
+                                            <span className="SecondBlack" style={{ fontSize: '28px' }}>{DashboardData.Details.savings}</span>
+                                        </div>
                                     </div>
-                                    <div style={{ display: 'block' }}>
-                                        <span className="SectionOneFooter">{DashboardData.Details.earned}</span>
+                                </div>
+                                <div className="col-md-3 col-sm-12">
+                                    <div className="d-flex flex-column" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)',backgroundColor:'white',borderLeft:'5px solid #6f42c1'  }}>
+                                        <div className="" style={{ textAlign: "center", paddingTop: '5px', }}>
+                                            <span className="ThirdWhite" style={{ fontSize: '18px',color: '#6f42c1',fontWeight:'600' }}>Loan Raised</span>
+                                        </div>
+                                        <div style={{ textAlign: "center", paddingTop: '10px', paddingBottom: '10px' }}>
+                                            <span className="SecondBlack" style={{ fontSize: '28px' }}>{DashboardData.Details.loanraised}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-3 col-sm-12">
+                                    <div className="d-flex flex-column" style={{ display: 'block', boxShadow: '5px 3px 5px 0px rgba(237, 237, 237, 1)',backgroundColor:'white',borderLeft:'5px solid #3ecabf'  }}>
+                                        <div className="" style={{ textAlign: "center", paddingTop: '5px',  }}>
+                                            <span className="ThirdWhite" style={{ fontSize: '18px',color: '#3ecabf',fontWeight:'600' }}>Earned</span>
+                                        </div>
+                                        <div style={{ textAlign: "center", paddingTop: '10px', paddingBottom: '10px' }}>
+                                            <span className="SecondBlack" style={{ fontSize: '28px' }}>{DashboardData.Details.earned}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +107,7 @@ class Dashboard extends Component {
                                         <td>Transaction Date</td>
                                         <td>Term</td>
                                         <td>Amount</td>
-                                       
+
                                     </tr>
                                     {
                                         DashboardData.TransactionList.map((transactionlist, index) => {
@@ -113,7 +119,7 @@ class Dashboard extends Component {
 
                                                     <td>{transactionlist.term}</td>
                                                     <td>{transactionlist.amount}</td>
-                                                   
+
                                                 </tr>
                                             )
                                         })

@@ -21,70 +21,66 @@ class DashChitList extends Component {
                                             </div>
 
                                             <div className="card-body">
-                                                <div style={{ marginBottom: '10px', marginTop: '10px' }}>
+                                                <div style={{ marginBottom: '10px', marginTop: '01px' }}>
+
                                                     <div className="row">
-                                                        <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.value}</span>
-                                                        </div>
-                                                        <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.emi}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="row">
-                                                        <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
+                                                        <div className="col-md-12" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
                                                             <span>Value</span>
                                                         </div>
-                                                        <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
-                                                            <span>EMI</span>
+                                                        <div className="col-md-12" style={{ textAlign: 'left' }}>
+                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.value}</span>
                                                         </div>
+
                                                     </div>
-                                                    <div className="row" style={{ marginTop: '10px' }}>
-                                                        <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.term}</span>
-                                                        </div>
-                                                        <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.earned}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="row">
-                                                        <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
-                                                            <span>Tenure</span>
-                                                        </div>
+                                                    <div className="row" style={{marginTop: '10px' }}>
                                                         <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
                                                             <span>Earned</span>
                                                         </div>
+                                                        <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
+                                                            <span>Tenure</span>
+                                                        </div>
                                                     </div>
+                                                    <div className="row"  style={{marginBottom: '10px' }}>
+                                                        <div className="col-md-6" style={{ textAlign: 'left' }}>
+                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.emi}</span>
+                                                        </div>
+                                                        <div className="col-md-6" style={{ textAlign: 'left' }}>
+                                                            <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.term}</span>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
-                                                {
-                                                    chitlist.loanamount != null ?
+                                             
 
                                                         <div style={{ marginTop: '10px', marginBottom: '10px' }}>
-                                                            <div className="row">
-                                                                <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                                    <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.loanamount}</span>
-                                                                </div>
-                                                                <div className="col-md-6" style={{ textAlign: 'left' }}>
-                                                                    <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.loanavailable}</span>
-                                                                </div>
-                                                            </div>
+
                                                             <div className="row">
                                                                 <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
-                                                                    <span>Loan Raised</span>
+                                                                    <span>EMI</span>
                                                                 </div>
                                                                 <div className="col-md-6" style={{ textAlign: 'left', fontSize: '12px', color: '#acacac' }}>
                                                                     <span>Loan Available</span>
                                                                 </div>
                                                             </div>
+                                                            <div className="row" >
+                                                                <div className="col-md-6" style={{ textAlign: 'left' }}>
+                                                                    <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.emi}</span>
+                                                                </div>
+                                                                <div className="col-md-6" style={{ textAlign: 'left' }}>
+                                                                    <span style={{ fontSize: '24px', color: '#676767' }}>{chitlist.loanavailable}</span>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
 
-                                                        : null
-                                                }
+                                                     
+                                                
 
                                                 <div>
                                                     <span className="ThirdBlack">Due Date: {chitlist.paydate}</span>
                                                 </div>
                                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-
+                                                    <button type="button" className="btn btn-emi">Avail Loan</button>
                                                     <button type="button" className="btn btn-emi">Pay EMI</button>
                                                     <Link to="/Home/Group/ChitDescription/MCT2014" style={{ textDecoration: 'none', color: 'black' }}>
                                                         <button type="button" className="btn btn-view">View</button>
