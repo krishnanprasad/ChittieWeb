@@ -26,15 +26,15 @@ class Dashboard extends Component {
             console.log('user state:' + this.state.isUserLoggedIn)
         }
 
-        axios.get('http://mynonymous.xyz/api/ChitDescription/UserChitConnections?UserId=U1-979-Kri', {}).then((res) => {
-            //on success
+        // axios.get('http://mynonymous.xyz/api/ChitDescription/UserChitConnections?UserId=U1-979-Kri', {}).then((res) => {
+        //     //on success
            
-            var ed = res.data
+        //     var ed = res.data
           
-        }).catch((error) => {
-            //on error
-            alert('There is an error in API call.');
-        });
+        // }).catch((error) => {
+        //     //on error
+        //     alert('There is an error in API call.');
+        // });
     }
 
 
