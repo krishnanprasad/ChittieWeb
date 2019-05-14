@@ -67,21 +67,21 @@ tr.HeaderTable {
 
 .btn-emi {
   
-    color: #ff9900 !important;
-    border-color: #ff9900 !important;
+    color: #de5555  !important;
+    border-color: #de5555  !important;
    
 }
 
 .btn-emi:hover {
-    background-color: #ff9900 !important;
+    background-color: #de5555  !important;
     color: white !important;
-    border-color: #ff9900 !important;
+    border-color: #de5555  !important;
 }
 
 .btn-loan {
     
-    color: #ff9900 !important;
-    border-color: #ff9900 !important;
+    color: #de5555 !important;
+    border-color: #de5555 !important;
 }
 
 .btn-loan:hover {
@@ -94,7 +94,7 @@ tr.HeaderTable {
 }
 
 .btn-view {
-    color: #ff9900 !important;
+    color: #de5555 !important;
 }
 
 .btn-view:hover {

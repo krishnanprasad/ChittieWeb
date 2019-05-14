@@ -13,59 +13,39 @@ class SideNav extends Component {
   render() {
     return (
 
-      <div className="sidenav" style={{ overflowY: 'hidden', backgroundColor: 'white', minHeight: '100%', textAlign: 'center' }}>
-        <div style={{ display: 'block', boxShadow: '0px 2px 5px #acacac', marginBottom: '10px' }}>
-          <img src={require("../../../src/assets/download.png")} style={{ width: '120px', height: '70px' }} alt="userimage" />
-        </div>
-        <img src={require("../../../src/assets/userimage.png")} style={{ width: '140px', height: '140px' }} alt="userimage" />
-        <div style={{ display: 'block', marginTop: '10px' }}>
-          <span style={{ fontSize: '25px' }}>Krishnan RA</span>
-        </div>
-        <div style={{ display: 'block', marginTop: '-10px' }}>
-          <span style={{ fontSize: '20px', color: '#acacac' }}>@krishnanra</span>
-        </div>
-        <div style={{ display: 'block', marginTop: '30px' }}>
-          <NavLink to={'/Home/Dashboard'} className="sidebarspan" activeClassName="activelink">
-            <span style={{ fontSize: '18px' }}>Dashboard</span>
+      <div className="sidenav d-flex" style={{ overflowY: 'hidden', backgroundColor: '#de5555' }}>
+        <div className="mr-auto">
+          <img src={require("../../../src/assets/download.png")} style={{ width: '100px', height: '70px' }} alt="userimage" />
+          {/* <span style={{ fontSize: '25px' }}>Krishnan RA</span> */}
+        </div> 
+        {/* <img src={require("../../../src/assets/userimage.png")} style={{ width: '140px', height: '140px' }} alt="userimage" /> */}
+        <div className="" style={{ display: '', marginTop: 'auto',marginBottom:'auto' }}>
+        {/* <span style={{ fontSize: '20px', color: '#acacac' }}>@krishnanra</span> */}
+        <NavLink to={'/Home/Dashboard'} className="sidebarspan" activeClassName="activelink">
+            <span className="navtext">Dashboard</span>
           </NavLink>
-        </div>
-        <div style={{ display: 'block', marginTop: '10px' }}>
           <NavLink to={'/Home/Group'} className="sidebarspan" activeClassName="activelink" >
-            <span style={{ fontSize: '18px' }}>Groups</span>
+            <span className="navtext">Groups</span>
+          </NavLink>
+          <NavLink to={'/Home/Transaction'} className="sidebarspan" activeClassName="activelink" >
+            <span className="navtext">Transactions</span>
+          </NavLink>
+          <NavLink to={'/Home/Notification'} className="sidebarspan" activeClassName="activelink" >
+            <span className="navtext">Notifications</span>
+          </NavLink>
+          <NavLink to={'/Home/Profile'} className="sidebarspan"  activeClassName="activelink" >
+            <span className="navtext">Profile</span>
+          </NavLink>
+          {/* <NavLink to={'/Home/CreateChit'} className="sidebarspan" activeClassName="activelink" >
+            <span className="navtext">Create a Chit</span>
+          </NavLink> */}
+           <NavLink to={'/'} exact className="sidebarspan" activeClassName="activelink" >
+            <span className="navtext">Log Out</span>
           </NavLink>
         </div>
+      
 
        
-
-        <div style={{ display: 'block', marginTop: '10px' }}>
-          <NavLink to={'/Home/Transaction'} className="sidebarspan" activeClassName="activelink" >
-            <span style={{ fontSize: '18px' }}>Transactions</span>
-          </NavLink>
-        </div>
-
-        <div style={{ display: 'block', marginTop: '10px' }}>
-          <NavLink to={'/Home/Notification'} className="sidebarspan" activeClassName="activelink" >
-            <span style={{ fontSize: '18px' }}>Notifications</span>
-          </NavLink>
-        </div>
-
-        <div style={{ display: 'block', marginTop: '10px' }}>
-          <NavLink to={'/Home/Profile'} className="sidebarspan"  activeClassName="activelink" >
-            <span style={{ fontSize: '18px' }}>Profile</span>
-          </NavLink>
-        </div>
-
-        <div style={{ display: 'block', marginTop: '10px' }}>
-          <NavLink to={'/Home/CreateChit'} className="sidebarspan" activeClassName="activelink" >
-            <span style={{ fontSize: '18px' }}>Create a Chit</span>
-          </NavLink>
-        </div>
-        <div style={{ display: 'block', marginTop: '10px' }}>
-          <NavLink to={'/'} exact className="sidebarspan" activeClassName="activelink" >
-            <span style={{ fontSize: '18px' }}>Log Out</span>
-          </NavLink>
-        </div>
-
       </div>
     )
   }

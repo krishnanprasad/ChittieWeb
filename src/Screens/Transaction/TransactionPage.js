@@ -46,7 +46,7 @@ class TransactionPage extends Component {
 
                 <div className="col-md-12 main">
 
-                    <div className="d-flex" style={{ backgroundColor: 'white', marginTop: '20px', fontSize: '18px',borderTop:'3px solid #ff9900' }}>
+                    <div className="d-flex" style={{ backgroundColor: 'white', marginTop: '20px', fontSize: '18px',borderTop:'3px solid #de5555' }}>
                         <div style={{ marginRight: '20px' }} className={`p-2 ${this.state.isTabActive == 1 ? 'tabactive' : 'tabnotactive'}`}>
                             <span onClick={() => this.ChangeTab(1)} style={{ cursor: 'pointer' }}>Transactions</span>
                         </div>

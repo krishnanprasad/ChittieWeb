@@ -41,26 +41,27 @@ class HomePage extends Component {
     return (
       <div className="HomePage" style={{ backgroundColor: '#f9f9f9' }}>
 
-        <button onClick={this.toggleSlidebar} className='ToggleButton' style={{ float: 'right' }}>Show Menu</button>
-        <div className="row" style={{ height: '100%' }}>
-          <div className="col-lg-3 col-sm-4">
-            {this.state.showing ? <SideNav /> : null}
+        {/* <button onClick={this.toggleSlidebar} className='ToggleButton' style={{ float: 'right' }}>Show Menu</button> */}
 
-          </div>
-          <div className="col-lg-9 col-sm-12" style={{ marginLeft: '-6%' }}>
+        <div className="col-lg-12 col-sm-12">
+          {this.state.showing ? <SideNav /> : null}
+        </div>
+        <div className="container">
+          <div className="col-lg-12 col-sm-12" style={{ marginTop: '8%' }}>
             <Route path="/Home/Dashboard" exact component={Dashboard} />
             <Route path="/Home/Group" component={GroupPage} />
 
             <Route path="/Home/Notification" exact component={NotificationPage} />
             <Route path="/Home/Profile" exact component={ProfilePage} />
             <Route path="/Home/Transaction" exact component={TransactionPage} />
-          
-            
-            
+
+
+
 
             <Route path="/Home/CreateChit" component={CreateChitPage} />
             <Route path="/" exact strict component={LoginPage} />
           </div>
+
         </div>
 
       </div>

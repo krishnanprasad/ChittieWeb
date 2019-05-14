@@ -1,33 +1,35 @@
 {
     "Details": {
         "totalchits": 2,
-        "savings": 36000,
-        "loanraised": 42000,
-        "earned": 4200
+        "savings": "36,000",
+        "loanavailable": "42,000",
+        "earned": "+4,200"
     },
     "ChitList": [
         {
             "chitid": "001",
             "chitname": "MCT 2014",
-            "value": 150000,
-            "emi": 1350,
+            "value": "1,50,000",
+            "emi": "1,350",
             "term": "06/10",
             "paydate": "09/11/2019",
+            "savings":"36,000",
             "earned": "860",
             "loanamount":0,
-            "loanavailable":"60000",
+            "loanavailable":"27,000",
             "loandate": "10/11/2019"
         },
         {
             "chitid": "002",
             "chitname": "TVS NEXT",
-            "value": 160000,
-            "emi": 1750,
-            "term": "03/10",
+            "value": "1,60,000",
+            "emi": "1,750",
+            "savings":"95,000",
+            "term": "07/10",
             "paydate": "11/11/2019",
             "earned": "-721",
-            "loanamount":40000,
-            "loanavailable":"15000",
+            "loanamount":"40,000",
+            "loanavailable":"15,000",
             "loandate": "15/11/2019"
         }
     ],

@@ -1,15 +1,15 @@
 
 .sidenav {
-    height: 100%;
+  
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #b5b5b5;
+    background-color: #ff8f56;
     overflow-x: hidden;
     /* padding-top: 20px; */
-    box-shadow: 5px 3px 5px 0px rgb(245, 245, 245);
+    box-shadow: 5px 3px 5px 0px #b7b7b7;
   }
   
   .main {
@@ -21,12 +21,12 @@
   
 
   .activelink{
-    color:#da5700 !important;
+    color:white !important;
     font-weight: 500;
   }
 
   .sidebarspan{
-    color:#1d1d1d;
+    color:#fdcfb8;
   }
   
 
@@ -38,4 +38,10 @@
     .nosidebar{
       display: none;
     }
+  }
+
+
+  .navtext{
+    font-size: 16px;
+    padding: 0px 10px;
   }
